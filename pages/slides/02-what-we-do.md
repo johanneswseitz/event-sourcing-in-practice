@@ -2,13 +2,14 @@
 
 <div class="container_12">
 	<div class="grid_4">
+		</br></br>		
 		<img src="static/img/DDD.png"/>
 	</div>
 	<div class="grid_4">
-		<img src="static/img/tdd.jpg"/>
+		<img src="static/img/softwerkskammer.png"/>
 	</div>
 	<div class="grid_4">
-		
+		<img src="static/img/tdd.jpg"/>
 	</div>
 </div>
 <div class="container_12">
