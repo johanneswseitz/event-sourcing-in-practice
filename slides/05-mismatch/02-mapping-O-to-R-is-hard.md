@@ -2,7 +2,9 @@
 
 <div class="container_12">
 	<div class="grid_4">
-		<img src="static/img/eaa.jpg">
+		<a href="http://martinfowler.com/books/eaa.html">
+			<img src="static/img/eaa.jpg">
+		</a>
 	</div>
 	<div class="grid_8">
 		<ul>
