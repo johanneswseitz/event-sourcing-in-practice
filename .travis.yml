@@ -1,7 +1,7 @@
 language: python
-install: pip install -r requirements.txt  
+install: pip install -r requirements.txt
 script: cactus build
 after_success: ./update-gh-pages.sh
 env:
   global:
-    secure: gQMbzTHBsWcBAayrSDFGeKUIb+eBRsRTKc8s4w0x6zkyPOGgb2PQHhtP+8s55C0oKoaYAvntivweXCJ0Xo4NsQbLBG2ntuaDHcD+3ddAguBkApXe5XBoLanoaHnuTc5Sw622zqKj6+m6UKTunHS9Wke4BRW3SV8vjsRY6Tbqu4A=
+  - secure: LCQx31kn57mbHPpB9IrHVtuWqJbOzQ0HfuvdjCk0CRAbB009kC86NIGffwhE8WIwi+h2t1iCq5BnGw558+X1z6Ble1IcHM4YWv3SoRotHtrM2ti8NxhfvJ88E3TK9LpmAEAqDtWUpax/V8lRCmpVVC28hoE/bAGgZYNZUW7JFGk=
