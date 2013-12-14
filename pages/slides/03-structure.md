@@ -2,7 +2,7 @@
 
 - The Object-Relational mismatch
 - How does Event Sourcing work?
-- Should you be doing Event Sourcing?
-- How we do Event Sourcing
+- Should you be doing ES?
+- How we do ES
 - Pitfalls we encountered
-- The shape of things to come
+- Cool projects to watch
