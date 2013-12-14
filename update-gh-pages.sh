@@ -17,7 +17,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
   #go into diractory and copy data we're interested in to that directory
   cd gh-pages
-  cp -Rf $TEMP_DIR .
+  cp -Rf $TEMP_DIR/* .
 
   #add, commit and push files
   git add -f .
