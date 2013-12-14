@@ -6,7 +6,7 @@ These are the slides we use for our talk "Event Sourcing in practice". We are sc
 
 Slide content is subject to change as we keep on learning :).
 
-## Pre-Built slides
+## Pre-built slides
 
 Coming soon
 
