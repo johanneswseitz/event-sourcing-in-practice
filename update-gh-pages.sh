@@ -4,8 +4,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
   #copy data we're interested in to other place
   mkdir /tmp/deploy
-  cp -R .build/* /tmp/deploy
-  cp -R static /tmp/deploy
+  cp -R --dereference .build/* /tmp/deploy
 
   #go to home and setup git
   cd $HOME
