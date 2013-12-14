@@ -9,6 +9,59 @@ SLIDES = []
 
 from markdown.preprocessors import Preprocessor
 from markdown.extensions import Extension
+import re
+
+class CodeSnippets(Extension):
+    def extendMarkdown(self, md, md_globals):
+        md.preprocessors.add('code_snippets', CodeSnippetIncludingPreProcessor(), '_begin')
+
+class CodeSnippetIncludingPreProcessor(Preprocessor):
+    def __init__(self):
+        self.satement_replacers = [CodeIncludeSatementReplacer()]
+
+    def run(self, lines):
+        new_lines = []
+        for line in lines:
+            for replacer in self.satement_replacers:
+                if (replacer.replaces(line)):
+                    new_lines.append(replacer.replacement_for(line))
+                else: 
+                    new_lines.append(line)
+        return new_lines
+
+
+
+class CodeIncludeSatementReplacer(object):
+
+    def __init__(self):
+        self.include_statement = re.compile(r"@(\(([^\)]*)\))?\[([^\]]*)\]")
+
+    def replaces(self, line):
+        return self.include_statement.match(line) != None
+
+    def replacement_for(self, line):
+        parameters = self.include_statement.search(line)
+        include_file = parameters.group(3)
+        snippet_maker = parameters.group(2)
+        with open(include_file) as file_content:
+            if not snippet_maker:
+                included = file_content.read()
+            else:
+                included = self.truncate_to_part_between_maker(snippet_maker, file_content)
+            return "~~~\n" + included + "\n~~~"
+
+    def truncate_to_part_between_maker(self, marker, file_content):
+        included = []
+        including = False
+        for line in file_content:
+            if marker in line and including:
+                return "\n".join(included)
+            if including:
+                included.append(line)
+            if marker in line and not including:
+                including = True
+        return "\n".join(included)
+
 
 
 def preBuild(site):
@@ -26,7 +79,7 @@ def preBuild(site):
             slide_meta_data["path"] = page.path
             page_content = open(page.paths['full']).read()
             if page.path.endswith(".md"):
-                slide_meta_data["markdown_content"] = markdown(page_content, ['extra', 'codehilite', CodeSampleIncludeExtension()])
+                slide_meta_data["markdown_content"] = markdown(page_content, ['extra', 'codehilite', CodeSnippets()])
 
             SLIDES.append(slide_meta_data)
 
