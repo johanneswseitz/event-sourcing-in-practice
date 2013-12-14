@@ -8,7 +8,9 @@ Slide content is subject to change as we keep on learning :).
 
 ## Pre-built slides
 
-Coming soon
+Slides are automatically built and published using Travis CI. You may find the latest version at ![the associated Github Page for this repository](http://ookami86.github.io/event-sourcing-in-practice/)
+
+[![Build Status](https://travis-ci.org/Ookami86/event-sourcing-in-practice.png?branch=master)](https://travis-ci.org/Ookami86/event-sourcing-in-practice)
 
 ## Building the slides from scratch
 
