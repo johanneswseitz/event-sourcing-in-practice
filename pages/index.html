@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block theme %}swiss{% endblock %}
+
+{% block header %}
+  <title>Event sourcing in practice</title>
+   <meta name="description" content="Learn about Event Sourcing and Command Sourcing as a persistance mechanism for Domain-Driven Design">
+  <meta name="author" content="Johannes Seitz">
+{% endblock %}
+
+{% block slides %}
+	{% for slide in slides %}
+	    <!-- {{slide}} -->
+	    <section class="slide" {% if slide.title %} id="{{slide.title}}" {% endif %}>
+			{% autoescape off %}
+				{% if slide.markdown_content %}
+					{{slide.markdown_content}}
+				{% else %}
+					{% include slide.path %}
+				{% endif %}
+	  		{% endautoescape %}
+	    </section>
+	{% endfor %}
+{% endblock %}
