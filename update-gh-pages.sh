@@ -4,6 +4,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
   #copy data we're interested in to other place
   cp -R build $HOME
+  cp -R static $HOME/build
 
   #go to home and setup git
   cd $HOME
