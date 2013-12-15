@@ -1,0 +1,1 @@
+# Considering Event Sourcing

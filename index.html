@@ -100,7 +100,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Structure&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;The Object-Relational mismatch&lt;/li&gt;\n&lt;li&gt;How does Event Sourcing work?&lt;/li&gt;\n&lt;li&gt;Should you be doing ES?&lt;/li&gt;\n&lt;li&gt;(How we do ES)&lt;/li&gt;\n&lt;li&gt;(Pitfalls we encountered)&lt;/li&gt;\n&lt;li&gt;Cool projects to watch&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/03-structure.md&#39;, &#39;title&#39;: &#39;structure.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Structure&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;The Object-Relational mismatch&lt;/li&gt;\n&lt;li&gt;How does Event Sourcing work?&lt;/li&gt;\n&lt;li&gt;Considering Event Sourcing&lt;/li&gt;\n&lt;li&gt;(How we do ES)&lt;/li&gt;\n&lt;li&gt;(Pitfalls we encountered)&lt;/li&gt;\n&lt;li&gt;Cool projects to watch&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/03-structure.md&#39;, &#39;title&#39;: &#39;structure.md&#39;} -->
 	    <section class="slide"  id="structure.md" >
 			
 				
@@ -108,7 +108,7 @@
 <ul>
 <li>The Object-Relational mismatch</li>
 <li>How does Event Sourcing work?</li>
-<li>Should you be doing ES?</li>
+<li>Considering Event Sourcing</li>
 <li>(How we do ES)</li>
 <li>(Pitfalls we encountered)</li>
 <li>Cool projects to watch</li>
@@ -117,16 +117,16 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Getting to know you&lt;/h2&gt;\n&lt;p&gt;Would you agree?&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;The domain we work with requires business insight&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Our business objects match our DB Tables&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;We use Hibernate (or any ORM) for O-R Mapping&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;We have a sh*tload of services, mutating business objects&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;We do Domain-Driven Design&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/04-getting-to-know-you.md&#39;, &#39;title&#39;: &#39;getting-to-know-you.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Getting to know you&lt;/h2&gt;\n&lt;p&gt;Would you agree?&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;Our domain is mostly just CRUD operations&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Our business objects map neatly to our DB Tables&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;We use Hibernate (or another ORM) for O-R Mapping&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;We have a sh*tload of services, mutating business objects&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;We do Domain-Driven Design&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/04-getting-to-know-you.md&#39;, &#39;title&#39;: &#39;getting-to-know-you.md&#39;} -->
 	    <section class="slide"  id="getting-to-know-you.md" >
 			
 				
 					<h2>Getting to know you</h2>
 <p>Would you agree?</p>
 <ul>
-<li class="slide">The domain we work with requires business insight</li>
-<li class="slide">Our business objects match our DB Tables</li>
-<li class="slide">We use Hibernate (or any ORM) for O-R Mapping</li>
+<li class="slide">Our domain is mostly just CRUD operations</li>
+<li class="slide">Our business objects map neatly to our DB Tables</li>
+<li class="slide">We use Hibernate (or another ORM) for O-R Mapping</li>
 <li class="slide">We have a sh*tload of services, mutating business objects</li>
 <li class="slide">We do Domain-Driven Design</li>
 </ul>
@@ -167,13 +167,22 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;What is Event Sourcing?&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;An alternate way to save data &lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Mapping of objects to a stream of events, not to tables &lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Thus bypasses the Object-Relational Impedence Mismatch &lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/01-what-is-event-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/01-what-is-event-sourcing.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;What is Event Sourcing&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/00-what-is-event-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/00-what-is-event-sourcing.md&#39;} -->
+	    <section class="slide"  id="how-eventsourcing-works/00-what-is-event-sourcing.md" >
+			
+				
+					<h1>What is Event Sourcing</h1>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;What is Event Sourcing?&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;An alternate way to save data &lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Mapping of objects to a stream of events, not to tables &lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Thus bypasses the Object-Relational Impedence Mismatch &lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/01-what-is-event-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/01-what-is-event-sourcing.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/01-what-is-event-sourcing.md" >
 			
 				
 					<h2>What is Event Sourcing?</h2>
 <ul>
-<li class="slide">An alternate way to save data </li>
+<li>An alternate way to save data </li>
 <li class="slide">Mapping of objects to a stream of events, not to tables </li>
 <li class="slide">Thus bypasses the Object-Relational Impedence Mismatch </li>
 </ul>
@@ -195,7 +204,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Saving objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Create an Event for every state change of the object:&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Evenstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;Save this stream of events somewhere, preserving their order&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/03-saving-objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/03-saving-objects.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Saving objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Create an Event for every state change of the object:&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;Save this stream of events somewhere, preserving their order&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/03-saving-objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/03-saving-objects.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/03-saving-objects.md" >
 			
 				
@@ -203,7 +212,7 @@
 <ul>
 <li>Create an Event for every state change of the object:</li>
 </ul>
-<p class="slide"><img alt="Evenstream" src="static/img/eventstream.png" /></p>
+<p class="slide"><img alt="Eventstream" src="static/img/eventstream.png" /></p>
 <ul>
 <li class="slide">Save this stream of events somewhere, preserving their order</li>
 </ul>
@@ -311,24 +320,88 @@ accountRepository.save(modifiedAccount)</code></pre>
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;} -->
-	    <section class="slide"  id="should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Considering Event Sourcing&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/00-considering-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/00-considering-event-sourcing.md&#39;} -->
+	    <section class="slide"  id="should-i-do-event-sourcing/00-considering-event-sourcing.md" >
 			
 				
-					
+					<h1>Considering Event Sourcing</h1>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Interesting Projects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;These are very early state but promising&lt;/li&gt;\n&lt;li&gt;Probably not suitable for production yet&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/09-interesting-projects/00-intersting-projects.md&#39;, &#39;title&#39;: &#39;interesting-projects/00-intersting-projects.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Pros and Cons of Event/Command Sourcing&lt;/h2&gt;\n&lt;h3&gt;Pros&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Bypass the O-R Impedence Mismatch&lt;/li&gt;\n&lt;li&gt;Easy undo mechanism&lt;/li&gt;\n&lt;li&gt;Debuggability and accountability&lt;/li&gt;\n&lt;li&gt;After-the-fact mining of Event Streams&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3&gt;Cons&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Awkward to query Domain Model (solved by CQRS)&lt;/li&gt;\n&lt;li&gt;Takes a bit of getting used to&lt;/li&gt;\n&lt;li&gt;Much less framework/community/vendor support&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;} -->
+	    <section class="slide"  id="should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md" >
+			
+				
+					<h2>Pros and Cons of Event/Command Sourcing</h2>
+<h3>Pros</h3>
+<ul>
+<li>Bypass the O-R Impedence Mismatch</li>
+<li>Easy undo mechanism</li>
+<li>Debuggability and accountability</li>
+<li>After-the-fact mining of Event Streams</li>
+</ul>
+<h3>Cons</h3>
+<ul>
+<li>Awkward to query Domain Model (solved by CQRS)</li>
+<li>Takes a bit of getting used to</li>
+<li>Much less framework/community/vendor support</li>
+</ul>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Debugging and accountability&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Every change to state is traceable&lt;/li&gt;\n&lt;li&gt;You know how the system got into the current state&lt;/li&gt;\n&lt;li&gt;Metadata like &quot;who did that&quot; and &quot;when did it happen&quot; &lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/02-debugging-and-accountability.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/02-debugging-and-accountability.md&#39;} -->
+	    <section class="slide"  id="should-i-do-event-sourcing/02-debugging-and-accountability.md" >
+			
+				
+					<h2>Debugging and accountability</h2>
+<ul>
+<li>Every change to state is traceable</li>
+<li>You know how the system got into the current state</li>
+<li>Metadata like "who did that" and "when did it happen" </li>
+</ul>
+<p><img alt="Eventstream" src="static/img/eventstream.png" /></p>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Retrospective mining of Event Streams&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Collection of previously uncollected metrics and infos is possible&lt;/li&gt;\n&lt;li&gt;E.G. A recommendation engine that recommends customers items, they removed from their shopping card&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/03-mining-event-streams.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/03-mining-event-streams.md&#39;} -->
+	    <section class="slide"  id="should-i-do-event-sourcing/03-mining-event-streams.md" >
+			
+				
+					<h2>Retrospective mining of Event Streams</h2>
+<ul>
+<li>Collection of previously uncollected metrics and infos is possible</li>
+<li>E.G. A recommendation engine that recommends customers items, they removed from their shopping card</li>
+</ul>
+<p><img alt="Eventstream" src="static/img/eventstream.png" /></p>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Should I be doing Event Sourcing?&lt;/h2&gt;\n&lt;p&gt;Event Sourcing is probably a good fit when you are:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;experienced in Domain-Driven Design &lt;/li&gt;\n&lt;li&gt;building a system doing more than simple CRUD&lt;/li&gt;\n&lt;li&gt;the accountability/debuggability is critical&lt;/li&gt;\n&lt;li&gt;deriving a competitive edge from the data&lt;/li&gt;\n&lt;li&gt;building a scaleable system based on CQRS princples&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/04-should-i-be-doing-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/04-should-i-be-doing-event-sourcing.md&#39;} -->
+	    <section class="slide"  id="should-i-do-event-sourcing/04-should-i-be-doing-event-sourcing.md" >
+			
+				
+					<h2>Should I be doing Event Sourcing?</h2>
+<p>Event Sourcing is probably a good fit when you are:</p>
+<ul>
+<li>experienced in Domain-Driven Design </li>
+<li>building a system doing more than simple CRUD</li>
+<li>the accountability/debuggability is critical</li>
+<li>deriving a competitive edge from the data</li>
+<li>building a scaleable system based on CQRS princples</li>
+</ul>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Interesting Projects&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/09-interesting-projects/00-intersting-projects.md&#39;, &#39;title&#39;: &#39;interesting-projects/00-intersting-projects.md&#39;} -->
 	    <section class="slide"  id="interesting-projects/00-intersting-projects.md" >
 			
 				
-					<h2>Interesting Projects</h2>
-<ul>
-<li>These are very early state but promising</li>
-<li>Probably not suitable for production yet</li>
-</ul>
+					<h1>Interesting Projects</h1>
 				
 	  		
 	    </section>
