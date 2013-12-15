@@ -2,11 +2,11 @@
 
 Would you agree?
 
-- The domain we work with requires business insight
+- Our domain is mostly just CRUD operations
 {.slide}
-- Our business objects match our DB Tables
+- Our business objects map neatly to our DB Tables
 {.slide}
-- We use Hibernate (or any ORM) for O-R Mapping
+- We use Hibernate (or another ORM) for O-R Mapping
 {.slide}
 - We have a sh*tload of services, mutating business objects
 {.slide}
