@@ -19,6 +19,7 @@ Slides are automatically built and published using Travis CI. You may find the l
 - Create a virtualenv 
   `pip install virtualenvwrapper && mkvirtualenv event-sourcing` (Recommended but optional)
 - Run `pip install -r requirements.txt`
+- Start the [Cactus](https://github.com/koenbok/cactus) server `cactus serve`
 
 ## Markdown
 
