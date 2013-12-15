@@ -1,4 +1,10 @@
 ## Saving objects
 
+- Create an Event for every state change of the Object:
 
-@(depositEvent)[code-samples/src/main/scala/event_sourcing/DepositPerformed.scala]
+![Evenstream](static/img/eventstream.png)
+{.slide}
+
+- Save this stream of events somewhere, preserving their order
+{.slide}
+

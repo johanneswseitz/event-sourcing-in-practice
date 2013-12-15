@@ -23,4 +23,4 @@ Slides are automatically built and published using Travis CI. You may find the l
 
 ## Markdown
 
-- Slides are created using markdown. The [Markdown Extra][http://michelf.ca/projects/php-markdown/extra/] syntax elements are enabled.
+- Slides are created using markdown. The [Markdown Extra](http://michelf.ca/projects/php-markdown/extra/) syntax elements are enabled.
