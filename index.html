@@ -100,7 +100,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Structure&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;The Object-Relational mismatch&lt;/li&gt;\n&lt;li&gt;How does Event Sourcing work?&lt;/li&gt;\n&lt;li&gt;Should you be doing ES?&lt;/li&gt;\n&lt;li&gt;How we do ES&lt;/li&gt;\n&lt;li&gt;Pitfalls we encountered&lt;/li&gt;\n&lt;li&gt;Cool projects to watch&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/03-structure.md&#39;, &#39;title&#39;: &#39;structure.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Structure&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;The Object-Relational mismatch&lt;/li&gt;\n&lt;li&gt;How does Event Sourcing work?&lt;/li&gt;\n&lt;li&gt;Should you be doing ES?&lt;/li&gt;\n&lt;li&gt;(How we do ES)&lt;/li&gt;\n&lt;li&gt;(Pitfalls we encountered)&lt;/li&gt;\n&lt;li&gt;Cool projects to watch&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/03-structure.md&#39;, &#39;title&#39;: &#39;structure.md&#39;} -->
 	    <section class="slide"  id="structure.md" >
 			
 				
@@ -109,8 +109,8 @@
 <li>The Object-Relational mismatch</li>
 <li>How does Event Sourcing work?</li>
 <li>Should you be doing ES?</li>
-<li>How we do ES</li>
-<li>Pitfalls we encountered</li>
+<li>(How we do ES)</li>
+<li>(Pitfalls we encountered)</li>
 <li>Cool projects to watch</li>
 </ul>
 				
@@ -134,18 +134,8 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;The Object-Relational mismatch&lt;/h2&gt;\n&lt;p&gt;&lt;a href=&quot;https://twitter.com/unclebobmartin/status/384682249301811200&quot;&gt;&lt;img alt=&quot;The biggest problem with ORM isn\&#39;t that they don\&#39;t map O to R. Tables _are not_ objects. They never were; and never will be.&quot; src=&quot;static/img/uncle-bob-tweet.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/05-mismatch/01-uncle-bob-citation.md&#39;, &#39;title&#39;: &#39;mismatch/01-uncle-bob-citation.md&#39;} -->
-	    <section class="slide"  id="mismatch/01-uncle-bob-citation.md" >
-			
-				
-					<h2>The Object-Relational mismatch</h2>
-<p><a href="https://twitter.com/unclebobmartin/status/384682249301811200"><img alt="The biggest problem with ORM isn't that they don't map O to R. Tables _are not_ objects. They never were; and never will be." src="static/img/uncle-bob-tweet.png" /></a></p>
-				
-	  		
-	    </section>
-	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Mapping O to R is suprisingly hard&lt;/h2&gt;\n&lt;div class=&quot;container_12&quot;&gt;\n    &lt;div class=&quot;grid_4&quot;&gt;\n        &lt;a href=&quot;http://martinfowler.com/books/eaa.html&quot;&gt;\n            &lt;img src=&quot;static/img/eaa.jpg&quot;&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid_8&quot;&gt;\n        &lt;ul&gt;\n            &lt;li&gt;143 pages on mapping O to R&lt;/li&gt;\n            &lt;li&gt;Recommends using ORM-Tools only for CRUD-heavy applications&lt;/li&gt;\n            &lt;li class=&quot;slide&quot;&gt;Why?&lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/div&gt;\n&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/05-mismatch/02-mapping-O-to-R-is-hard.md&#39;, &#39;title&#39;: &#39;mismatch/02-mapping-O-to-R-is-hard.md&#39;} -->
-	    <section class="slide"  id="mismatch/02-mapping-O-to-R-is-hard.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Mapping O to R is suprisingly hard&lt;/h2&gt;\n&lt;div class=&quot;container_12&quot;&gt;\n    &lt;div class=&quot;grid_4&quot;&gt;\n        &lt;a href=&quot;http://martinfowler.com/books/eaa.html&quot;&gt;\n            &lt;img src=&quot;static/img/eaa.jpg&quot;&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid_8&quot;&gt;\n        &lt;ul&gt;\n            &lt;li&gt;143 pages on mapping O to R&lt;/li&gt;\n            &lt;li&gt;Recommends using ORM-Tools only for CRUD-heavy applications&lt;/li&gt;\n            &lt;li class=&quot;slide&quot;&gt;Why?&lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/div&gt;\n&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/05-mismatch/01-mapping-O-to-R-is-hard.md&#39;, &#39;title&#39;: &#39;mismatch/01-mapping-O-to-R-is-hard.md&#39;} -->
+	    <section class="slide"  id="mismatch/01-mapping-O-to-R-is-hard.md" >
 			
 				
 					<h2>Mapping O to R is suprisingly hard</h2>
@@ -163,6 +153,16 @@
         </ul>
     </div>
 </div>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;The Object-Relational mismatch&lt;/h2&gt;\n&lt;p&gt;&lt;a href=&quot;https://twitter.com/unclebobmartin/status/384682249301811200&quot;&gt;&lt;img alt=&quot;The biggest problem with ORM\&#39;s is that they don\&#39;t really map O to R. Tables _are not_ objects. They never were; and never will be.&quot; src=&quot;static/img/uncle-bob-tweet.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/05-mismatch/02-uncle-bob-citation.md&#39;, &#39;title&#39;: &#39;mismatch/02-uncle-bob-citation.md&#39;} -->
+	    <section class="slide"  id="mismatch/02-uncle-bob-citation.md" >
+			
+				
+					<h2>The Object-Relational mismatch</h2>
+<p><a href="https://twitter.com/unclebobmartin/status/384682249301811200"><img alt="The biggest problem with ORM's is that they don't really map O to R. Tables _are not_ objects. They never were; and never will be." src="static/img/uncle-bob-tweet.png" /></a></p>
 				
 	  		
 	    </section>
@@ -195,13 +195,13 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Saving objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Create an Event for every state change of the Object:&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Evenstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;Save this stream of events somewhere, preserving their order&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/03-saving-objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/03-saving-objects.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Saving objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Create an Event for every state change of the object:&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Evenstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;Save this stream of events somewhere, preserving their order&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/03-saving-objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/03-saving-objects.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/03-saving-objects.md" >
 			
 				
 					<h2>Saving objects</h2>
 <ul>
-<li>Create an Event for every state change of the Object:</li>
+<li>Create an Event for every state change of the object:</li>
 </ul>
 <p class="slide"><img alt="Evenstream" src="static/img/eventstream.png" /></p>
 <ul>
@@ -211,74 +211,202 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring Objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;To restore an Object, first retrieve its Event Stream&lt;/li&gt;\n&lt;li&gt;Apply each of the events to an &quot;empty&quot; Object, starting with the first&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 1&quot; src=&quot;static/img/restore-from-eventstream-1.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-1.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-1.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring objects&lt;/h2&gt;\n&lt;p&gt;Subsequently apply the events from the respective &lt;code&gt;EventStream&lt;/code&gt; to a fresh object instance&lt;/p&gt;\n&lt;p&gt;&lt;img alt=&quot;Evenstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-0.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-0.md&#39;} -->
+	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-0.md" >
+			
+				
+					<h2>Restoring objects</h2>
+<p>Subsequently apply the events from the respective <code>EventStream</code> to a fresh object instance</p>
+<p><img alt="Evenstream" src="static/img/eventstream.png" /></p>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring Objects&lt;/h2&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 1&quot; src=&quot;static/img/restore-from-eventstream-1.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-1.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-1.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-1.md" >
 			
 				
 					<h2>Restoring Objects</h2>
-<ul>
-<li>To restore an Object, first retrieve its Event Stream</li>
-<li>Apply each of the events to an "empty" Object, starting with the first</li>
-</ul>
 <p><img alt="Restore from EventStream 1" src="static/img/restore-from-eventstream-1.png" /></p>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring Objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;To restore an Object, first retrieve its Event Stream&lt;/li&gt;\n&lt;li&gt;Apply each of the events to an &quot;empty&quot; Object, starting with the first&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 2&quot; src=&quot;static/img/restore-from-eventstream-2.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-2.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-2.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring Objects&lt;/h2&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 2&quot; src=&quot;static/img/restore-from-eventstream-2.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-2.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-2.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-2.md" >
 			
 				
 					<h2>Restoring Objects</h2>
-<ul>
-<li>To restore an Object, first retrieve its Event Stream</li>
-<li>Apply each of the events to an "empty" Object, starting with the first</li>
-</ul>
 <p><img alt="Restore from EventStream 2" src="static/img/restore-from-eventstream-2.png" /></p>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring Objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;To restore an Object, first retrieve its Event Stream&lt;/li&gt;\n&lt;li&gt;Apply each of the events to an &quot;empty&quot; Object, starting with the first&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 3&quot; src=&quot;static/img/restore-from-eventstream-3.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-3.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-3.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring Objects&lt;/h2&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 3&quot; src=&quot;static/img/restore-from-eventstream-3.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-3.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-3.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-3.md" >
 			
 				
 					<h2>Restoring Objects</h2>
-<ul>
-<li>To restore an Object, first retrieve its Event Stream</li>
-<li>Apply each of the events to an "empty" Object, starting with the first</li>
-</ul>
 <p><img alt="Restore from EventStream 3" src="static/img/restore-from-eventstream-3.png" /></p>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring Objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;To restore an Object, first retrieve its Event Stream&lt;/li&gt;\n&lt;li&gt;Apply each of the events to an &quot;empty&quot; Object, starting with the first&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 4&quot; src=&quot;static/img/restore-from-eventstream-4.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-4.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-4.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring Objects&lt;/h2&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 4&quot; src=&quot;static/img/restore-from-eventstream-4.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-4.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-4.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-4.md" >
 			
 				
 					<h2>Restoring Objects</h2>
-<ul>
-<li>To restore an Object, first retrieve its Event Stream</li>
-<li>Apply each of the events to an "empty" Object, starting with the first</li>
-</ul>
 <p><img alt="Restore from EventStream 4" src="static/img/restore-from-eventstream-4.png" /></p>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Updating objects&lt;/h2&gt;\n&lt;pre class=&quot;codehilite&quot;&gt;&lt;code class=&quot;language-scala&quot;&gt;var account = accountRepository.get(123)\nvar modifiedAccount = account.withdraw(new Euro(10))\naccountRepository.save(modifiedAccount)&lt;/code&gt;&lt;/pre&gt;\n\n\n&lt;p&gt;What will be persisted?&lt;/p&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Updating EventStream&quot; src=&quot;static/img/eventstream-update.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/05-updating objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/05-updating objects.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 2&quot; src=&quot;static/img/restore-from-eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-5.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-5.md&#39;} -->
+	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-5.md" >
+			
+				
+					<p><img alt="Restore from EventStream 2" src="static/img/restore-from-eventstream.png" /></p>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Updating Objects&lt;/h2&gt;\n&lt;pre class=&quot;codehilite&quot;&gt;&lt;code class=&quot;language-scala&quot;&gt;var account = accountRepository.get(123)\nvar modifiedAccount = account.withdraw(new Euro(10))\naccountRepository.save(modifiedAccount)&lt;/code&gt;&lt;/pre&gt;\n\n\n&lt;p&gt;What should be persisted?&lt;/p&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Updating EventStream&quot; src=&quot;static/img/eventstream-update.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/05-updating objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/05-updating objects.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/05-updating objects.md" >
 			
 				
-					<h2>Updating objects</h2>
+					<h2>Updating Objects</h2>
 <pre class="codehilite"><code class="language-scala">var account = accountRepository.get(123)
 var modifiedAccount = account.withdraw(new Euro(10))
 accountRepository.save(modifiedAccount)</code></pre>
 
 
-<p>What will be persisted?</p>
+<p>What should be persisted?</p>
 <p class="slide"><img alt="Updating EventStream" src="static/img/eventstream-update.png" /></p>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Deleting Objects&lt;/h2&gt;\n&lt;p&gt;How do you delete an object?&lt;/p&gt;\n&lt;p  class=&quot;slide&quot;&gt;\n&lt;img src=&quot;static/img/bank-account-closed-event.png&quot; style=&quot;margin:0px&quot;/&gt;\n&lt;/p&gt;\n\n&lt;p class=&quot;slide&quot;&gt;&lt;a href=&quot;http://martinfowler.com/eaaDev/RetroactiveEvent.html&quot;&gt;Retroactive Event&lt;/a&gt;. An event undoing something that happened in the past&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/06-deleting-objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/06-deleting-objects.md&#39;} -->
+	    <section class="slide"  id="how-eventsourcing-works/06-deleting-objects.md" >
+			
+				
+					<h2>Deleting Objects</h2>
+<p>How do you delete an object?</p>
+<p  class="slide">
+<img src="static/img/bank-account-closed-event.png" style="margin:0px"/>
+</p>
+
+<p class="slide"><a href="http://martinfowler.com/eaaDev/RetroactiveEvent.html">Retroactive Event</a>. An event undoing something that happened in the past</p>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Event Sourcing vs Command Sourcing&lt;/h2&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md&#39;} -->
+	    <section class="slide"  id="how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md" >
+			
+				
+					<h2>Event Sourcing vs Command Sourcing</h2>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;} -->
+	    <section class="slide"  id="should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md" >
+			
+				
+					
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Interesting Projects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;These are very early state but promising&lt;/li&gt;\n&lt;li&gt;Probably not suitable for production yet&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/09-interesting-projects/00-intersting-projects.md&#39;, &#39;title&#39;: &#39;interesting-projects/00-intersting-projects.md&#39;} -->
+	    <section class="slide"  id="interesting-projects/00-intersting-projects.md" >
+			
+				
+					<h2>Interesting Projects</h2>
+<ul>
+<li>These are very early state but promising</li>
+<li>Probably not suitable for production yet</li>
+</ul>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Event Store&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Open Source Database for Event Sourcing&lt;/li&gt;\n&lt;li&gt;Project driven by Greg Young&lt;/li&gt;\n&lt;li&gt;Works on Mono/.Net&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;https://github.com/EventStore/eventstorejvmclient&quot;&gt;Early version of Java/Scala Bindings&lt;/a&gt; available&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;http://geteventstore.com/&quot;&gt;More Information available here&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img src=&quot;static/img/ouro.png&quot; style=&quot;float:right;width:30%&quot;/&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/09-interesting-projects/01-event-store.md&#39;, &#39;title&#39;: &#39;interesting-projects/01-event-store.md&#39;} -->
+	    <section class="slide"  id="interesting-projects/01-event-store.md" >
+			
+				
+					<h2>Event Store</h2>
+<ul>
+<li>Open Source Database for Event Sourcing</li>
+<li>Project driven by Greg Young</li>
+<li>Works on Mono/.Net</li>
+<li><a href="https://github.com/EventStore/eventstorejvmclient">Early version of Java/Scala Bindings</a> available</li>
+<li><a href="http://geteventstore.com/">More Information available here</a></li>
+</ul>
+<p><img src="static/img/ouro.png" style="float:right;width:30%"/></p>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Akka Persistence&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Experimental extension for Akka&lt;/li&gt;\n&lt;li&gt;Based on the Actor model&lt;/li&gt;\n&lt;li&gt;Supports both Command and Event Sourcing&lt;/li&gt;\n&lt;li&gt;Works with Java or Scala&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;http://doc.akka.io/docs/akka/snapshot/java/persistence.html&quot;&gt;More Information available here&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img src=&quot;static/img/akka.png&quot; style=&quot;float:right;width:40%&quot;/&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/09-interesting-projects/02-akka-persistence.md&#39;, &#39;title&#39;: &#39;interesting-projects/02-akka-persistence.md&#39;} -->
+	    <section class="slide"  id="interesting-projects/02-akka-persistence.md" >
+			
+				
+					<h2>Akka Persistence</h2>
+<ul>
+<li>Experimental extension for Akka</li>
+<li>Based on the Actor model</li>
+<li>Supports both Command and Event Sourcing</li>
+<li>Works with Java or Scala</li>
+<li><a href="http://doc.akka.io/docs/akka/snapshot/java/persistence.html">More Information available here</a></li>
+</ul>
+<p><img src="static/img/akka.png" style="float:right;width:40%"/></p>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Thank you for your kind attention&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/98-thanks.md&#39;, &#39;title&#39;: &#39;thanks.md&#39;} -->
+	    <section class="slide"  id="thanks.md" >
+			
+				
+					<h1>Thank you for your kind attention</h1>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Sources and further reading&lt;/h2&gt;\n&lt;h3&gt;Event Sourcing theory&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=&quot;http://www.martinfowler.com/eaaDev/EventSourcing.html&quot;&gt;Martin Fowler on Event Sourcing&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;http://www.martinfowler.com/eaaDev/DomainEvent.html&quot;&gt;Martin Fowler on Domain Events&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;Note: What Martin Fowler calls Domain Events, we came to recognise as Commands. The article &lt;a href=&quot;http://thinkbeforecoding.com/post/2013/07/28/Event-Sourcing-vs-Command-Sourcing&quot;&gt;Event Sourcing vs Command Sourcing&lt;/a&gt; explains the difference.&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;https://vaughnvernon.co/?page_id=168&quot;&gt;Implementing Domain-Driven Design by Vaughn Vernom&lt;/a&gt; covers Event Sourcing in Appendix A&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3&gt;Event sourcing implementation&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=&quot;http://abdullin.com/storage/uploads/2010/04/2010-04-16_DDDD_Drafts_by_Greg_Young.pdf&quot;&gt;DDDD by Greg Young&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;http://bliki.abdullin.com/event-sourcing/versioning&quot;&gt;Event versioning and evolutions&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/99-further-reading-1.md&#39;, &#39;title&#39;: &#39;further-reading-1.md&#39;} -->
+	    <section class="slide"  id="further-reading-1.md" >
+			
+				
+					<h2>Sources and further reading</h2>
+<h3>Event Sourcing theory</h3>
+<ul>
+<li><a href="http://www.martinfowler.com/eaaDev/EventSourcing.html">Martin Fowler on Event Sourcing</a></li>
+<li><a href="http://www.martinfowler.com/eaaDev/DomainEvent.html">Martin Fowler on Domain Events</a></li>
+<li>Note: What Martin Fowler calls Domain Events, we came to recognise as Commands. The article <a href="http://thinkbeforecoding.com/post/2013/07/28/Event-Sourcing-vs-Command-Sourcing">Event Sourcing vs Command Sourcing</a> explains the difference.</li>
+<li><a href="https://vaughnvernon.co/?page_id=168">Implementing Domain-Driven Design by Vaughn Vernom</a> covers Event Sourcing in Appendix A</li>
+</ul>
+<h3>Event sourcing implementation</h3>
+<ul>
+<li><a href="http://abdullin.com/storage/uploads/2010/04/2010-04-16_DDDD_Drafts_by_Greg_Young.pdf">DDDD by Greg Young</a></li>
+<li><a href="http://bliki.abdullin.com/event-sourcing/versioning">Event versioning and evolutions</a></li>
+</ul>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Sources and further reading&lt;/h2&gt;\n&lt;h3&gt;Command-Query Responsibility Segregation (CQRS)&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;a href=&quot;http://skillsmatter.com/expert-profile/design-architecture/greg-young&quot;&gt;Greg Young on the Business Side of CQRS/ES&lt;/a&gt;&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;http://msdn.microsoft.com/en-us/library/jj554200.aspx&quot;&gt;A CQRS Journey by Microsoft&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/99-further-reading-2.md&#39;, &#39;title&#39;: &#39;further-reading-2.md&#39;} -->
+	    <section class="slide"  id="further-reading-2.md" >
+			
+				
+					<h2>Sources and further reading</h2>
+<h3>Command-Query Responsibility Segregation (CQRS)</h3>
+<ul>
+<li><a href="http://skillsmatter.com/expert-profile/design-architecture/greg-young">Greg Young on the Business Side of CQRS/ES</a></li>
+<li><a href="http://msdn.microsoft.com/en-us/library/jj554200.aspx">A CQRS Journey by Microsoft</a></li>
+</ul>
 				
 	  		
 	    </section>
