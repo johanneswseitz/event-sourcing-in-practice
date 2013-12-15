@@ -195,12 +195,90 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Saving objects&lt;/h2&gt;\n&lt;pre class=&quot;codehilite&quot;&gt;&lt;code&gt;case class DepositPerformed(account:UUID, amount:MonetaryAmount)&lt;/code&gt;&lt;/pre&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/03-saving-objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/03-saving-objects.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Saving objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Create an Event for every state change of the Object:&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Evenstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;Save this stream of events somewhere, preserving their order&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/03-saving-objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/03-saving-objects.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/03-saving-objects.md" >
 			
 				
 					<h2>Saving objects</h2>
-<pre class="codehilite"><code>case class DepositPerformed(account:UUID, amount:MonetaryAmount)</code></pre>
+<ul>
+<li>Create an Event for every state change of the Object:</li>
+</ul>
+<p class="slide"><img alt="Evenstream" src="static/img/eventstream.png" /></p>
+<ul>
+<li class="slide">Save this stream of events somewhere, preserving their order</li>
+</ul>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring Objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;To restore an Object, first retrieve its Event Stream&lt;/li&gt;\n&lt;li&gt;Apply each of the events to an &quot;empty&quot; Object, starting with the first&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 1&quot; src=&quot;static/img/restore-from-eventstream-1.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-1.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-1.md&#39;} -->
+	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-1.md" >
+			
+				
+					<h2>Restoring Objects</h2>
+<ul>
+<li>To restore an Object, first retrieve its Event Stream</li>
+<li>Apply each of the events to an "empty" Object, starting with the first</li>
+</ul>
+<p><img alt="Restore from EventStream 1" src="static/img/restore-from-eventstream-1.png" /></p>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring Objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;To restore an Object, first retrieve its Event Stream&lt;/li&gt;\n&lt;li&gt;Apply each of the events to an &quot;empty&quot; Object, starting with the first&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 2&quot; src=&quot;static/img/restore-from-eventstream-2.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-2.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-2.md&#39;} -->
+	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-2.md" >
+			
+				
+					<h2>Restoring Objects</h2>
+<ul>
+<li>To restore an Object, first retrieve its Event Stream</li>
+<li>Apply each of the events to an "empty" Object, starting with the first</li>
+</ul>
+<p><img alt="Restore from EventStream 2" src="static/img/restore-from-eventstream-2.png" /></p>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring Objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;To restore an Object, first retrieve its Event Stream&lt;/li&gt;\n&lt;li&gt;Apply each of the events to an &quot;empty&quot; Object, starting with the first&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 3&quot; src=&quot;static/img/restore-from-eventstream-3.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-3.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-3.md&#39;} -->
+	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-3.md" >
+			
+				
+					<h2>Restoring Objects</h2>
+<ul>
+<li>To restore an Object, first retrieve its Event Stream</li>
+<li>Apply each of the events to an "empty" Object, starting with the first</li>
+</ul>
+<p><img alt="Restore from EventStream 3" src="static/img/restore-from-eventstream-3.png" /></p>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring Objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;To restore an Object, first retrieve its Event Stream&lt;/li&gt;\n&lt;li&gt;Apply each of the events to an &quot;empty&quot; Object, starting with the first&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 4&quot; src=&quot;static/img/restore-from-eventstream-4.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-4.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-4.md&#39;} -->
+	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-4.md" >
+			
+				
+					<h2>Restoring Objects</h2>
+<ul>
+<li>To restore an Object, first retrieve its Event Stream</li>
+<li>Apply each of the events to an "empty" Object, starting with the first</li>
+</ul>
+<p><img alt="Restore from EventStream 4" src="static/img/restore-from-eventstream-4.png" /></p>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Updating objects&lt;/h2&gt;\n&lt;pre class=&quot;codehilite&quot;&gt;&lt;code class=&quot;language-scala&quot;&gt;var account = accountRepository.get(123)\nvar modifiedAccount = account.withdraw(new Euro(10))\naccountRepository.save(modifiedAccount)&lt;/code&gt;&lt;/pre&gt;\n\n\n&lt;p&gt;What will be persisted?&lt;/p&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Updating EventStream&quot; src=&quot;static/img/eventstream-update.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/05-updating objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/05-updating objects.md&#39;} -->
+	    <section class="slide"  id="how-eventsourcing-works/05-updating objects.md" >
+			
+				
+					<h2>Updating objects</h2>
+<pre class="codehilite"><code class="language-scala">var account = accountRepository.get(123)
+var modifiedAccount = account.withdraw(new Euro(10))
+accountRepository.save(modifiedAccount)</code></pre>
+
+
+<p>What will be persisted?</p>
+<p class="slide"><img alt="Updating EventStream" src="static/img/eventstream-update.png" /></p>
 				
 	  		
 	    </section>
