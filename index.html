@@ -312,11 +312,39 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Event Sourcing vs Command Sourcing&lt;/h2&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Event Sourcing vs Command Sourcing&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Command Sourcing and Event Sourcing are very similars&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Terms tend to get confused on the web&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;&lt;a href=&quot;http://www.martinfowler.com/eaaDev/EventSourcing.html&quot;&gt;Martin Fowler&lt;/a&gt; wrote about what we call Command Sourcing&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md" >
 			
 				
 					<h2>Event Sourcing vs Command Sourcing</h2>
+<ul>
+<li>Command Sourcing and Event Sourcing are very similars</li>
+<li class="slide">Terms tend to get confused on the web</li>
+<li class="slide"><a href="http://www.martinfowler.com/eaaDev/EventSourcing.html">Martin Fowler</a> wrote about what we call Command Sourcing</li>
+</ul>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Command Sourcing&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Command Pattern as defined in &quot;Design Patterns&quot;&lt;/li&gt;\n&lt;li&gt;Name is imperative &quot;do something!&quot;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Command&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BankAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bankAccount&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BankAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;BankAccount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;bankAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/08-command-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/08-command-sourcing.md&#39;} -->
+	    <section class="slide"  id="how-eventsourcing-works/08-command-sourcing.md" >
+			
+				
+					<h2>Command Sourcing</h2>
+<ul>
+<li>Command Pattern as defined in "Design Patterns"</li>
+<li>Name is imperative "do something!"</li>
+</ul>
+<div class="codehilite"><pre><span class="k">class</span> <span class="nc">ChangeOwner</span><span class="o">(</span><span class="n">newOwner</span><span class="k">:</span><span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Command</span><span class="o">[</span><span class="kt">BankAccount</span><span class="o">]</span> <span class="o">{</span>
+
+  <span class="k">def</span> <span class="n">execute</span><span class="o">(</span><span class="n">bankAccount</span><span class="k">:</span><span class="kt">BankAccount</span><span class="o">)</span><span class="k">:</span> <span class="kt">BankAccount</span> <span class="o">=</span> <span class="o">{</span>
+
+    <span class="n">bankAccount</span><span class="o">.</span><span class="n">changeOwner</span><span class="o">(</span><span class="n">newOwner</span><span class="o">)</span>
+
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
 				
 	  		
 	    </section>
