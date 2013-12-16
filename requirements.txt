@@ -1,5 +1,6 @@
 Cactus==2.3.1
 Django==1.5.5
 Markdown==2.3.1
+Pygments==1.6
 boto==2.20.0
 wsgiref==0.1.2
