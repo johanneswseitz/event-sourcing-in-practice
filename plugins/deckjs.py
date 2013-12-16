@@ -48,7 +48,8 @@ class CodeIncludeSatementReplacer(object):
                 included = file_content.read()
             else:
                 included = self.truncate_to_part_between_maker(snippet_maker, file_content)
-            return "~~~\n" + included + "\n~~~"
+                # TODO: factor this out as a parameter
+            return "~~~ {.scala}\n" + included + "\n~~~"
 
     def truncate_to_part_between_maker(self, marker, file_content):
         included = []
