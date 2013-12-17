@@ -101,7 +101,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Structure&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;The Object-Relational mismatch&lt;/li&gt;\n&lt;li&gt;How does Event Sourcing work?&lt;/li&gt;\n&lt;li&gt;Considering Event Sourcing&lt;/li&gt;\n&lt;li&gt;(How we do ES)&lt;/li&gt;\n&lt;li&gt;(Pitfalls we encountered)&lt;/li&gt;\n&lt;li&gt;Cool projects to watch&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/03-structure.md&#39;, &#39;title&#39;: &#39;structure.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&quot;&lt;h2&gt;Structure&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;The Object-Relational mismatch&lt;/li&gt;\n&lt;li&gt;How does Event Sourcing work?&lt;/li&gt;\n&lt;li&gt;Considering Event Sourcing&lt;/li&gt;\n&lt;li&gt;Cool projects to watch&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3&gt;Unfortunately we won&#39;t be able to cover&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;How we do ES&lt;/li&gt;\n&lt;/ul&gt;&quot;, &#39;path&#39;: &#39;slides/03-structure.md&#39;, &#39;title&#39;: &#39;structure.md&#39;} -->
 	    <section class="slide"  id="structure.md" >
 			
 				
@@ -110,9 +110,11 @@
 <li>The Object-Relational mismatch</li>
 <li>How does Event Sourcing work?</li>
 <li>Considering Event Sourcing</li>
-<li>(How we do ES)</li>
-<li>(Pitfalls we encountered)</li>
 <li>Cool projects to watch</li>
+</ul>
+<h3>Unfortunately we won't be able to cover</h3>
+<ul>
+<li>How we do ES</li>
 </ul>
 				
 	  		
@@ -327,7 +329,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Command Sourcing&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Command Pattern as defined in &quot;Design Patterns&quot;&lt;/li&gt;\n&lt;li&gt;Name is imperative &quot;do something!&quot;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BankAccountCommandHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BankAccountRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n\n\n&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Command&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/08-command-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/08-command-sourcing.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Command Sourcing&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Command Pattern as defined in &quot;Design Patterns&quot;&lt;/li&gt;\n&lt;li&gt;Name is imperative &quot;do something!&quot;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Command&lt;/span&gt;\n\n\n\n&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BankAccountCommandHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BankAccountRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/08-command-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/08-command-sourcing.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/08-command-sourcing.md" >
 			
 				
@@ -336,7 +338,11 @@
 <li>Command Pattern as defined in "Design Patterns"</li>
 <li>Name is imperative "do something!"</li>
 </ul>
-<div class="codehilite"><pre><span class="k">class</span> <span class="nc">BankAccountCommandHandler</span><span class="o">(</span><span class="n">bankAccountRepo</span><span class="k">:</span><span class="kt">BankAccountRepository</span><span class="o">)</span> <span class="o">{</span>
+<div class="codehilite"><pre><span class="k">case</span> <span class="k">class</span> <span class="nc">ChangeOwner</span><span class="o">(</span><span class="n">accountID</span><span class="k">:</span> <span class="kt">UUID</span><span class="o">,</span> <span class="n">newOwner</span><span class="k">:</span><span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Command</span>
+
+
+
+<span class="k">class</span> <span class="nc">BankAccountCommandHandler</span><span class="o">(</span><span class="n">bankAccountRepo</span><span class="k">:</span><span class="kt">BankAccountRepository</span><span class="o">)</span> <span class="o">{</span>
 
   <span class="k">def</span> <span class="n">handle</span><span class="o">(</span><span class="n">changeOwner</span><span class="k">:</span><span class="kt">ChangeOwner</span><span class="o">)</span> <span class="o">{</span>
 
@@ -349,10 +355,6 @@
   <span class="o">}</span>
 
 <span class="o">}</span>
-
-
-
-<span class="k">case</span> <span class="k">class</span> <span class="nc">ChangeOwner</span><span class="o">(</span><span class="n">accountID</span><span class="k">:</span> <span class="kt">UUID</span><span class="o">,</span> <span class="n">newOwner</span><span class="k">:</span><span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Command</span>
 </pre></div>
 				
 	  		
