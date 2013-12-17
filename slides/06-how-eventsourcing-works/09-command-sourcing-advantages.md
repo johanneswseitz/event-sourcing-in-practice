@@ -1,10 +1,10 @@
 ## Command Sourcing
 
-### Pro {.pros}
+### Pros {.pros}
 
 - A bit easier to implement
 - Command log doubles as full audit log
 
-### Contra {.cons}
+### Cons {.cons}
 
 - Replaying may inflict unexpected side effects
