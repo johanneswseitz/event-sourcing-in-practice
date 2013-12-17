@@ -1,10 +1,10 @@
-## Saving objects
+## Saving Objects
 
-- Create an Event for every state change of the object:
+- Create an event for every state change of the object:
 
 ![Eventstream](static/img/eventstream.png)
 {.slide}
 
-- Save this stream of events somewhere, preserving their order
+- Persist this stream of events, preserving their order
 {.slide}
 
