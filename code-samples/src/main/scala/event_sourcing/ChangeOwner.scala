@@ -3,6 +3,8 @@ package event_sourcing
 import java.util.UUID
 
 // changeOwnerCommand
+case class ChangeOwner(accountID: UUID, newOwner:String) extends Command
+
 class BankAccountCommandHandler(bankAccountRepo:BankAccountRepository) {
   def handle(changeOwner:ChangeOwner) {
     val account = bankAccountRepo.getAccount(changeOwner.accountID)
@@ -10,6 +12,4 @@ class BankAccountCommandHandler(bankAccountRepo:BankAccountRepository) {
     bankAccountRepo.saveAccount(modifiedAccount)
   }
 }
-
-case class ChangeOwner(accountID: UUID, newOwner:String) extends Command
 // changeOwnerCommand
