@@ -1,1 +1,1 @@
-# What is Event Sourcing
+# What is Event Sourcing?

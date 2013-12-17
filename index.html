@@ -170,11 +170,11 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;What is Event Sourcing&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/00-what-is-event-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/00-what-is-event-sourcing.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;What is Event Sourcing?&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/00-what-is-event-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/00-what-is-event-sourcing.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/00-what-is-event-sourcing.md" >
 			
 				
-					<h1>What is Event Sourcing</h1>
+					<h1>What is Event Sourcing?</h1>
 				
 	  		
 	    </section>
@@ -193,11 +193,11 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;What is an event&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Something that happend &lt;em&gt;in the past&lt;/em&gt;.&lt;/li&gt;\n&lt;li&gt;E.G. &lt;img alt=&quot;Deposit Performed Event in UML&quot; src=&quot;static/img/deposit-performed-event-v1.png&quot; /&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;!-- http://www.yuml.me/diagram/scruffy;/class/edit/[DepositPerformed|amount;accountNumber] --&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/02-what-is-an-event.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/02-what-is-an-event.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;What is an Event?&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Something that happend &lt;em&gt;in the past&lt;/em&gt;.&lt;/li&gt;\n&lt;li&gt;E.G. &lt;img alt=&quot;Deposit Performed Event in UML&quot; src=&quot;static/img/deposit-performed-event-v1.png&quot; /&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;!-- http://www.yuml.me/diagram/scruffy;/class/edit/[DepositPerformed|amount;accountNumber] --&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/02-what-is-an-event.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/02-what-is-an-event.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/02-what-is-an-event.md" >
 			
 				
-					<h2>What is an event</h2>
+					<h2>What is an Event?</h2>
 <ul>
 <li>Something that happend <em>in the past</em>.</li>
 <li>E.G. <img alt="Deposit Performed Event in UML" src="static/img/deposit-performed-event-v1.png" /></li>
@@ -207,29 +207,29 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Saving objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Create an Event for every state change of the object:&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;Save this stream of events somewhere, preserving their order&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/03-saving-objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/03-saving-objects.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Saving Objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Create an event for every state change of the object:&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;Persist this stream of events, preserving their order&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/03-saving-objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/03-saving-objects.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/03-saving-objects.md" >
 			
 				
-					<h2>Saving objects</h2>
+					<h2>Saving Objects</h2>
 <ul>
-<li>Create an Event for every state change of the object:</li>
+<li>Create an event for every state change of the object:</li>
 </ul>
 <p class="slide"><img alt="Eventstream" src="static/img/eventstream.png" /></p>
 <ul>
-<li class="slide">Save this stream of events somewhere, preserving their order</li>
+<li class="slide">Persist this stream of events, preserving their order</li>
 </ul>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring objects&lt;/h2&gt;\n&lt;p&gt;Subsequently apply the events from the respective &lt;code&gt;EventStream&lt;/code&gt; to a fresh object instance&lt;/p&gt;\n&lt;p&gt;&lt;img alt=&quot;Evenstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-0.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-0.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring Objects&lt;/h2&gt;\n&lt;p&gt;Subsequently apply the events from the respective &lt;code&gt;EventStream&lt;/code&gt; to a fresh object instance&lt;/p&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-0.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-0.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-0.md" >
 			
 				
-					<h2>Restoring objects</h2>
+					<h2>Restoring Objects</h2>
 <p>Subsequently apply the events from the respective <code>EventStream</code> to a fresh object instance</p>
-<p><img alt="Evenstream" src="static/img/eventstream.png" /></p>
+<p><img alt="Eventstream" src="static/img/eventstream.png" /></p>
 				
 	  		
 	    </section>
@@ -315,13 +315,13 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Event Sourcing vs Command Sourcing&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Command Sourcing and Event Sourcing are very similars&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Terms tend to get confused on the web&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;&lt;a href=&quot;http://www.martinfowler.com/eaaDev/EventSourcing.html&quot;&gt;Martin Fowler&lt;/a&gt; wrote about what we call Command Sourcing&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Event Sourcing vs Command Sourcing&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Command Sourcing and Event Sourcing are very similar&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Terms tend to get confused on the web&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;&lt;a href=&quot;http://www.martinfowler.com/eaaDev/EventSourcing.html&quot;&gt;Martin Fowler&lt;/a&gt; wrote about what we call Command Sourcing&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md" >
 			
 				
 					<h2>Event Sourcing vs Command Sourcing</h2>
 <ul>
-<li>Command Sourcing and Event Sourcing are very similars</li>
+<li>Command Sourcing and Event Sourcing are very similar</li>
 <li class="slide">Terms tend to get confused on the web</li>
 <li class="slide"><a href="http://www.martinfowler.com/eaaDev/EventSourcing.html">Martin Fowler</a> wrote about what we call Command Sourcing</li>
 </ul>
@@ -329,14 +329,14 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Command Sourcing&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Command Pattern as defined in &quot;Design Patterns&quot;&lt;/li&gt;\n&lt;li&gt;Name is imperative &quot;do something!&quot;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Command&lt;/span&gt;\n\n\n\n&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BankAccountCommandHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BankAccountRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/08-command-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/08-command-sourcing.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Command Sourcing&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Command Pattern as defined in &quot;Design Patterns&quot;&lt;/li&gt;\n&lt;li&gt;Command names are imperative &quot;do something!&quot;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Command&lt;/span&gt;\n\n\n\n&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BankAccountCommandHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BankAccountRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/08-command-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/08-command-sourcing.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/08-command-sourcing.md" >
 			
 				
 					<h2>Command Sourcing</h2>
 <ul>
 <li>Command Pattern as defined in "Design Patterns"</li>
-<li>Name is imperative "do something!"</li>
+<li>Command names are imperative "do something!"</li>
 </ul>
 <div class="codehilite"><pre><span class="k">case</span> <span class="k">class</span> <span class="nc">ChangeOwner</span><span class="o">(</span><span class="n">accountID</span><span class="k">:</span> <span class="kt">UUID</span><span class="o">,</span> <span class="n">newOwner</span><span class="k">:</span><span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Command</span>
 
@@ -447,15 +447,15 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Pros and Cons of Event/Command Sourcing&lt;/h2&gt;\n&lt;h3&gt;Pros&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Bypass the O-R Impedence Mismatch&lt;/li&gt;\n&lt;li&gt;Easy undo mechanism&lt;/li&gt;\n&lt;li&gt;Debuggability and accountability&lt;/li&gt;\n&lt;li&gt;After-the-fact mining of Event Streams&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3&gt;Cons&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Awkward to query Domain Model (solved by CQRS)&lt;/li&gt;\n&lt;li&gt;Takes a bit of getting used to&lt;/li&gt;\n&lt;li&gt;Much less framework/community/vendor support&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Pros and Cons of Event/Command Sourcing&lt;/h2&gt;\n&lt;h3&gt;Pros&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Bypass the O-R Impedance Mismatch&lt;/li&gt;\n&lt;li&gt;Allows for easy undo mechanism&lt;/li&gt;\n&lt;li&gt;Debuggability and accountability&lt;/li&gt;\n&lt;li&gt;After-the-fact mining of Event Streams&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3&gt;Cons&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Awkward to query Domain Model (solved by CQRS)&lt;/li&gt;\n&lt;li&gt;Takes a bit of getting used to&lt;/li&gt;\n&lt;li&gt;Much less framework/community/vendor support&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;} -->
 	    <section class="slide"  id="should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md" >
 			
 				
 					<h2>Pros and Cons of Event/Command Sourcing</h2>
 <h3>Pros</h3>
 <ul>
-<li>Bypass the O-R Impedence Mismatch</li>
-<li>Easy undo mechanism</li>
+<li>Bypass the O-R Impedance Mismatch</li>
+<li>Allows for easy undo mechanism</li>
 <li>Debuggability and accountability</li>
 <li>After-the-fact mining of Event Streams</li>
 </ul>
@@ -484,14 +484,14 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Retrospective mining of Event Streams&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Collection of previously uncollected metrics and infos is possible&lt;/li&gt;\n&lt;li&gt;E.G. A recommendation engine that recommends customers items, they removed from their shopping card&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/03-mining-event-streams.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/03-mining-event-streams.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Retrospective mining of Event Streams&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Collection of previously uncollected metrics and infos is possible&lt;/li&gt;\n&lt;li&gt;E.G. A recommendation engine that recommends customers items, they removed from their shopping cart&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/03-mining-event-streams.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/03-mining-event-streams.md&#39;} -->
 	    <section class="slide"  id="should-i-do-event-sourcing/03-mining-event-streams.md" >
 			
 				
 					<h2>Retrospective mining of Event Streams</h2>
 <ul>
 <li>Collection of previously uncollected metrics and infos is possible</li>
-<li>E.G. A recommendation engine that recommends customers items, they removed from their shopping card</li>
+<li>E.G. A recommendation engine that recommends customers items, they removed from their shopping cart</li>
 </ul>
 <p><img alt="Eventstream" src="static/img/eventstream.png" /></p>
 				
@@ -515,8 +515,8 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Interesting Projects&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/09-interesting-projects/00-intersting-projects.md&#39;, &#39;title&#39;: &#39;interesting-projects/00-intersting-projects.md&#39;} -->
-	    <section class="slide"  id="interesting-projects/00-intersting-projects.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Interesting Projects&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/09-interesting-projects/00-interesting-projects.md&#39;, &#39;title&#39;: &#39;interesting-projects/00-interesting-projects.md&#39;} -->
+	    <section class="slide"  id="interesting-projects/00-interesting-projects.md" >
 			
 				
 					<h1>Interesting Projects</h1>
