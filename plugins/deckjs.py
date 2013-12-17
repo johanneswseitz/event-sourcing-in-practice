@@ -1,23 +1,25 @@
 import os
 import datetime
 import logging
-from markdown import markdown
 import re
 
-SLIDES_PATH = 'slides' + os.sep
-SLIDES = []
-
+from markdown import markdown
 from markdown.preprocessors import Preprocessor
 from markdown.extensions import Extension
-import re
 
+
+# TODO: extract this into a module of its own
 class CodeSnippets(Extension):
-    def extendMarkdown(self, md, md_globals):
-        md.preprocessors.add('code_snippets', CodeSnippetIncludingPreProcessor(), '_begin')
+    def __init__(self, seek_directory):
+        self.seek_directory = seek_directory
 
+    def extendMarkdown(self, md, md_globals):
+        preproc = CodeSnippetIncludingPreProcessor(self.seek_directory)
+        md.preprocessors.add('code_snippets', preproc, '_begin')
+ 
 class CodeSnippetIncludingPreProcessor(Preprocessor):
-    def __init__(self):
-        self.satement_replacers = [CodeIncludeSatementReplacer()]
+    def __init__(self, seek_directory):
+        self.satement_replacers = [CodeIncludeSatementReplacer(seek_directory)]
 
     def run(self, lines):
         new_lines = []
@@ -32,16 +34,18 @@ class CodeSnippetIncludingPreProcessor(Preprocessor):
 
 
 class CodeIncludeSatementReplacer(object):
-
-    def __init__(self):
+    def __init__(self, seek_directory):
         self.include_statement = re.compile(r"@(\(([^\)]*)\))?\[([^\]]*)\]")
+        self.seek_directory = seek_directory
 
     def replaces(self, line):
         return self.include_statement.match(line) != None
-
+ 
     def replacement_for(self, line):
         parameters = self.include_statement.search(line)
         include_file = parameters.group(3)
+        if not os.path.isabs(include_file):
+            include_file = os.path.join(self.seek_directory, include_file)
         snippet_maker = parameters.group(2)
         with open(include_file) as file_content:
             if not snippet_maker:
@@ -64,6 +68,9 @@ class CodeIncludeSatementReplacer(object):
         return "\n".join(included)
 
 
+SLIDES_PATH = 'slides' + os.sep
+MARKDOWN_EXTRAS = ['extra', 'codehilite', CodeSnippets(os.getcwd())]
+SLIDES = []
 
 def preBuild(site):
     global SLIDES
@@ -79,8 +86,9 @@ def preBuild(site):
             slide_meta_data["title"] = "-".join(page.path.split("-")[1:])
             slide_meta_data["path"] = page.path
             page_content = open(page.paths['full']).read()
+            page_directory = os.path.dirname(page.paths['full'])
             if page.path.endswith(".md"):
-                slide_meta_data["markdown_content"] = markdown(page_content, ['extra', 'codehilite', CodeSnippets()])
+                slide_meta_data["markdown_content"] = markdown(page_content, ['extra', 'codehilite', CodeSnippets(page_directory)])
 
             SLIDES.append(slide_meta_data)
 
