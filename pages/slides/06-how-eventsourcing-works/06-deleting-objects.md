@@ -1,4 +1,4 @@
-## Deleting Objects
+## Deleting objects
 
 How do you delete an object?
 

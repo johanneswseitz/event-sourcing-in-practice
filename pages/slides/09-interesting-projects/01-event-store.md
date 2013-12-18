@@ -1,8 +1,8 @@
 ## Event Store 
 
-- Open Source Database for Event Sourcing
+- Open Source database for Event Sourcing
 - Project driven by Greg Young
-- Works on Mono/.Net
+- Works on .Net/Mono
 - [Early version of Java/Scala Bindings](https://github.com/EventStore/eventstorejvmclient) available
 - [More Information available here](http://geteventstore.com/)
 

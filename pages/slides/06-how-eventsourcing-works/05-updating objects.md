@@ -1,4 +1,4 @@
-## Updating Objects
+## Updating objects
 
 ~~~ {.scala}
 val account = accountRepository.get(123)

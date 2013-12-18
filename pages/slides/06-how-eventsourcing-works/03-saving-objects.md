@@ -1,4 +1,4 @@
-## Saving Objects
+## Saving objects
 
 - Create an event for every state change of the object:
 

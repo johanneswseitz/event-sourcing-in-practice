@@ -1,4 +1,4 @@
-## Restoring Objects
+## Restoring objects
 
 Subsequently apply the events from the respective `EventStream` to a fresh object instance
 
