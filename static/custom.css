@@ -1,3 +1,9 @@
+pre {
+	font-size: 1em;
+	white-space: pre !important;
+	border-style: none !important;
+}
+
 div.codehilite {
 	line-height: 1;
 }
