@@ -1,8 +1,6 @@
 language: python
 install: pip install -r requirements.txt
-script: 
-  - (cd code-samples && sbt test)
-  - cactus build
+script: make build
 after_success: ./update-gh-pages.sh
 env:
   global:
