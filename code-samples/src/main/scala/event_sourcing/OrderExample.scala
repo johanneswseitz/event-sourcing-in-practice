@@ -18,11 +18,13 @@ object OrderSentToBank {
 
 class BrokerCommandHandler (bankInterface:BankInterface,
                             orderBookRepository:OrderBookRepository) {
+
   def handle(buyCommand:PerformBuyOrder) = {
     var orderBook = orderBookRepository.load(buyCommand.orderBookId)
     val validationResult = bankInterface.validate(buyCommand.order)
     if (!validationResult.succeeded)
       throw new InvalidOrderException(validationResult)
+
     val orderConfirmation = bankInterface.perform(buyCommand.order)
     val orderPerformedEvent = OrderSentToBank.from(orderConfirmation)
     orderBook = orderBook.handle(orderPerformedEvent)
