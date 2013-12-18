@@ -2,8 +2,8 @@
 
 ### Pros
 
-- Bypass the O-R Impedence Mismatch
-- Easy undo mechanism
+- Bypass the O-R Impedance Mismatch
+- Allows for easy undo mechanism
 - Debuggability and accountability
 - After-the-fact mining of Event Streams
 
