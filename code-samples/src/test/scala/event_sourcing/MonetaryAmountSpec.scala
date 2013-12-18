@@ -1,7 +1,6 @@
 package event_sourcing
 
 
-import event_sourcing.MonetaryAmount
 import org.specs2.mutable._
 import org.specs2.runner.JUnitRunner
 import org.junit.runner.RunWith
