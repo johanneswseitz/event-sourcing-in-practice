@@ -116,7 +116,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Structure&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Active Record vs. Event Sourcing&lt;/li&gt;\n&lt;li&gt;The advantages of Event Sourcing&lt;/li&gt;\n&lt;li&gt;How does Event Sourcing work?&lt;/li&gt;\n&lt;li&gt;Caveats of Event Sourcing&lt;/li&gt;\n&lt;li&gt;Should we do Event Sourcing?&lt;/li&gt;\n&lt;li&gt;Cool projects to watch&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/04-structure.md&#39;, &#39;title&#39;: &#39;structure.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Structure&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Active Record vs. Event Sourcing&lt;/li&gt;\n&lt;li&gt;The advantages of Event Sourcing&lt;/li&gt;\n&lt;li&gt;How does Event Sourcing work?&lt;/li&gt;\n&lt;li&gt;Caveats of Event Sourcing&lt;/li&gt;\n&lt;li&gt;Considering Event Sourcing&lt;/li&gt;\n&lt;li&gt;(Bonus) Cool projects to watch&lt;/li&gt;\n&lt;li&gt;(Bonus) Links to resources&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/04-structure.md&#39;, &#39;title&#39;: &#39;structure.md&#39;} -->
 	    <section class="slide"  id="structure.md" >
 			
 				
@@ -126,8 +126,9 @@
 <li>The advantages of Event Sourcing</li>
 <li>How does Event Sourcing work?</li>
 <li>Caveats of Event Sourcing</li>
-<li>Should we do Event Sourcing?</li>
-<li>Cool projects to watch</li>
+<li>Considering Event Sourcing</li>
+<li>(Bonus) Cool projects to watch</li>
+<li>(Bonus) Links to resources</li>
 </ul>
 				
 	  		
@@ -492,8 +493,29 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Considering Event Sourcing&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/08-should-i-do-event-sourcing/00-considering-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/00-considering-event-sourcing.md&#39;} -->
-	    <section class="slide"  id="should-i-do-event-sourcing/00-considering-event-sourcing.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Caveats of Event Sourcing&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/08-event-sourcing-cavetas/00-event-sourcing-caveats.md&#39;, &#39;title&#39;: &#39;event-sourcing-cavetas/00-event-sourcing-caveats.md&#39;} -->
+	    <section class="slide"  id="event-sourcing-cavetas/00-event-sourcing-caveats.md" >
+			
+				
+					<h1>Caveats of Event Sourcing</h1>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;path&#39;: &#39;slides/08-event-sourcing-cavetas/01-event-sourcing-caveats&#39;, &#39;title&#39;: &#39;event-sourcing-cavetas/01-event-sourcing-caveats&#39;} -->
+	    <section class="slide"  id="event-sourcing-cavetas/01-event-sourcing-caveats" >
+			
+				
+					## Caveats of Event Sourcing
+
+* Replaying without side-effects
+* Reporting and Queries
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Considering Event Sourcing&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/09-considering-event-sourcing/00-considering-event-sourcing.md&#39;, &#39;title&#39;: &#39;considering-event-sourcing/00-considering-event-sourcing.md&#39;} -->
+	    <section class="slide"  id="considering-event-sourcing/00-considering-event-sourcing.md" >
 			
 				
 					<h1>Considering Event Sourcing</h1>
@@ -501,8 +523,8 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Pros and Cons of Event/Command Sourcing&lt;/h2&gt;\n&lt;h3&gt;Pros&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Bypass the O-R Impedance Mismatch&lt;/li&gt;\n&lt;li&gt;Allows for easy undo mechanism&lt;/li&gt;\n&lt;li&gt;Debuggability and accountability&lt;/li&gt;\n&lt;li&gt;After-the-fact mining of Event Streams&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3&gt;Cons&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Awkward to query Domain Model (solved by CQRS)&lt;/li&gt;\n&lt;li&gt;Takes a bit of getting used to&lt;/li&gt;\n&lt;li&gt;Much less framework/community/vendor support&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/08-should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;} -->
-	    <section class="slide"  id="should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Pros and Cons of Event/Command Sourcing&lt;/h2&gt;\n&lt;h3&gt;Pros&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Bypass the O-R Impedance Mismatch&lt;/li&gt;\n&lt;li&gt;Allows for easy undo mechanism&lt;/li&gt;\n&lt;li&gt;Debuggability and accountability&lt;/li&gt;\n&lt;li&gt;After-the-fact mining of Event Streams&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3&gt;Cons&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Awkward to query Domain Model (solved by CQRS)&lt;/li&gt;\n&lt;li&gt;Takes a bit of getting used to&lt;/li&gt;\n&lt;li&gt;Much less framework/community/vendor support&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/09-considering-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;, &#39;title&#39;: &#39;considering-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;} -->
+	    <section class="slide"  id="considering-event-sourcing/01-pros-and-cons-of-event-sourcing.md" >
 			
 				
 					<h2>Pros and Cons of Event/Command Sourcing</h2>
@@ -523,8 +545,8 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Debugging and accountability&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Every change to state is traceable&lt;/li&gt;\n&lt;li&gt;You know how the system got into the current state&lt;/li&gt;\n&lt;li&gt;Metadata like &quot;who did that&quot; and &quot;when did it happen&quot; &lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/08-should-i-do-event-sourcing/02-debugging-and-accountability.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/02-debugging-and-accountability.md&#39;} -->
-	    <section class="slide"  id="should-i-do-event-sourcing/02-debugging-and-accountability.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Debugging and accountability&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Every change to state is traceable&lt;/li&gt;\n&lt;li&gt;You know how the system got into the current state&lt;/li&gt;\n&lt;li&gt;Metadata like &quot;who did that&quot; and &quot;when did it happen&quot; &lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/09-considering-event-sourcing/02-debugging-and-accountability.md&#39;, &#39;title&#39;: &#39;considering-event-sourcing/02-debugging-and-accountability.md&#39;} -->
+	    <section class="slide"  id="considering-event-sourcing/02-debugging-and-accountability.md" >
 			
 				
 					<h2>Debugging and accountability</h2>
@@ -538,8 +560,8 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Retrospective mining of Event Streams&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Collection of previously uncollected metrics and infos is possible&lt;/li&gt;\n&lt;li&gt;E.G. A recommendation engine that recommends customers items, they removed from their shopping cart&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/08-should-i-do-event-sourcing/03-mining-event-streams.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/03-mining-event-streams.md&#39;} -->
-	    <section class="slide"  id="should-i-do-event-sourcing/03-mining-event-streams.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Retrospective mining of Event Streams&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Collection of previously uncollected metrics and infos is possible&lt;/li&gt;\n&lt;li&gt;E.G. A recommendation engine that recommends customers items, they removed from their shopping cart&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/09-considering-event-sourcing/03-mining-event-streams.md&#39;, &#39;title&#39;: &#39;considering-event-sourcing/03-mining-event-streams.md&#39;} -->
+	    <section class="slide"  id="considering-event-sourcing/03-mining-event-streams.md" >
 			
 				
 					<h2>Retrospective mining of Event Streams</h2>
@@ -552,8 +574,8 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Should I be doing Event Sourcing?&lt;/h2&gt;\n&lt;p&gt;Event Sourcing is probably a good fit when you are:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;experienced in Domain-Driven Design &lt;/li&gt;\n&lt;li&gt;building a system doing more than simple CRUD&lt;/li&gt;\n&lt;li&gt;the accountability/debuggability is critical&lt;/li&gt;\n&lt;li&gt;deriving a competitive edge from the data&lt;/li&gt;\n&lt;li&gt;building a scaleable system based on CQRS princples&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/08-should-i-do-event-sourcing/04-should-i-be-doing-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/04-should-i-be-doing-event-sourcing.md&#39;} -->
-	    <section class="slide"  id="should-i-do-event-sourcing/04-should-i-be-doing-event-sourcing.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Should I be doing Event Sourcing?&lt;/h2&gt;\n&lt;p&gt;Event Sourcing is probably a good fit when you are:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;experienced in Domain-Driven Design &lt;/li&gt;\n&lt;li&gt;building a system doing more than simple CRUD&lt;/li&gt;\n&lt;li&gt;the accountability/debuggability is critical&lt;/li&gt;\n&lt;li&gt;deriving a competitive edge from the data&lt;/li&gt;\n&lt;li&gt;building a scaleable system based on CQRS princples&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/09-considering-event-sourcing/04-should-i-be-doing-event-sourcing.md&#39;, &#39;title&#39;: &#39;considering-event-sourcing/04-should-i-be-doing-event-sourcing.md&#39;} -->
+	    <section class="slide"  id="considering-event-sourcing/04-should-i-be-doing-event-sourcing.md" >
 			
 				
 					<h2>Should I be doing Event Sourcing?</h2>
@@ -569,7 +591,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Interesting Projects&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/09-interesting-projects/00-interesting-projects.md&#39;, &#39;title&#39;: &#39;interesting-projects/00-interesting-projects.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Interesting Projects&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/10-interesting-projects/00-interesting-projects.md&#39;, &#39;title&#39;: &#39;interesting-projects/00-interesting-projects.md&#39;} -->
 	    <section class="slide"  id="interesting-projects/00-interesting-projects.md" >
 			
 				
@@ -578,7 +600,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Event Store&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Open Source database for Event Sourcing&lt;/li&gt;\n&lt;li&gt;Project driven by Greg Young&lt;/li&gt;\n&lt;li&gt;Works on .Net/Mono&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;https://github.com/EventStore/eventstorejvmclient&quot;&gt;Early version of Java/Scala Bindings&lt;/a&gt; available&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;http://geteventstore.com/&quot;&gt;More Information available here&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img src=&quot;static/img/ouro.png&quot; style=&quot;float:right;width:30%&quot;/&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/09-interesting-projects/01-event-store.md&#39;, &#39;title&#39;: &#39;interesting-projects/01-event-store.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Event Store&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Open Source database for Event Sourcing&lt;/li&gt;\n&lt;li&gt;Project driven by Greg Young&lt;/li&gt;\n&lt;li&gt;Works on .Net/Mono&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;https://github.com/EventStore/eventstorejvmclient&quot;&gt;Early version of Java/Scala Bindings&lt;/a&gt; available&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;http://geteventstore.com/&quot;&gt;More Information available here&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img src=&quot;static/img/ouro.png&quot; style=&quot;float:right;width:30%&quot;/&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/10-interesting-projects/01-event-store.md&#39;, &#39;title&#39;: &#39;interesting-projects/01-event-store.md&#39;} -->
 	    <section class="slide"  id="interesting-projects/01-event-store.md" >
 			
 				
@@ -595,7 +617,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Akka Persistence&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Experimental extension for Akka&lt;/li&gt;\n&lt;li&gt;Based on the Actor model&lt;/li&gt;\n&lt;li&gt;Supports both Command- and Event Sourcing&lt;/li&gt;\n&lt;li&gt;Works with Java and Scala&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;http://doc.akka.io/docs/akka/snapshot/java/persistence.html&quot;&gt;More Information available here&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img src=&quot;static/img/akka.png&quot; style=&quot;float:right;width:40%&quot;/&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/09-interesting-projects/02-akka-persistence.md&#39;, &#39;title&#39;: &#39;interesting-projects/02-akka-persistence.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Akka Persistence&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Experimental extension for Akka&lt;/li&gt;\n&lt;li&gt;Based on the Actor model&lt;/li&gt;\n&lt;li&gt;Supports both Command- and Event Sourcing&lt;/li&gt;\n&lt;li&gt;Works with Java and Scala&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;http://doc.akka.io/docs/akka/snapshot/java/persistence.html&quot;&gt;More Information available here&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img src=&quot;static/img/akka.png&quot; style=&quot;float:right;width:40%&quot;/&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/10-interesting-projects/02-akka-persistence.md&#39;, &#39;title&#39;: &#39;interesting-projects/02-akka-persistence.md&#39;} -->
 	    <section class="slide"  id="interesting-projects/02-akka-persistence.md" >
 			
 				

@@ -1,0 +1,4 @@
+## Caveats of Event Sourcing
+
+* Replaying without side-effects
+* Reporting and Queries

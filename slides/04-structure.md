@@ -4,5 +4,6 @@
 - The advantages of Event Sourcing
 - How does Event Sourcing work?
 - Caveats of Event Sourcing
-- Should we do Event Sourcing?
-- Cool projects to watch
+- Considering Event Sourcing
+- (Bonus) Cool projects to watch
+- (Bonus) Links to resources
