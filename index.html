@@ -101,47 +101,109 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&quot;&lt;h2&gt;Structure&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;The Object-Relational mismatch&lt;/li&gt;\n&lt;li&gt;How does Event Sourcing work?&lt;/li&gt;\n&lt;li&gt;Considering Event Sourcing&lt;/li&gt;\n&lt;li&gt;Cool projects to watch&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3&gt;Unfortunately we won&#39;t be able to cover&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;How we do ES&lt;/li&gt;\n&lt;/ul&gt;&quot;, &#39;path&#39;: &#39;slides/03-structure.md&#39;, &#39;title&#39;: &#39;structure.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Getting to know you&lt;/h2&gt;\n&lt;p&gt;But first:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;I have heard about Event Sourcing before&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;We do Domain-Driven Design&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;We do CQRS and/or Event Sourcing&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/03-getting-to-know-you.md&#39;, &#39;title&#39;: &#39;getting-to-know-you.md&#39;} -->
+	    <section class="slide"  id="getting-to-know-you.md" >
+			
+				
+					<h2>Getting to know you</h2>
+<p>But first:</p>
+<ul>
+<li class="slide">I have heard about Event Sourcing before</li>
+<li class="slide">We do Domain-Driven Design</li>
+<li class="slide">We do CQRS and/or Event Sourcing</li>
+</ul>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Structure&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Active Record vs. Event Sourcing&lt;/li&gt;\n&lt;li&gt;The advantages of Event Sourcing&lt;/li&gt;\n&lt;li&gt;How does Event Sourcing work?&lt;/li&gt;\n&lt;li&gt;Caveats of Event Sourcing&lt;/li&gt;\n&lt;li&gt;Should we do Event Sourcing?&lt;/li&gt;\n&lt;li&gt;Cool projects to watch&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/04-structure.md&#39;, &#39;title&#39;: &#39;structure.md&#39;} -->
 	    <section class="slide"  id="structure.md" >
 			
 				
 					<h2>Structure</h2>
 <ul>
-<li>The Object-Relational mismatch</li>
+<li>Active Record vs. Event Sourcing</li>
+<li>The advantages of Event Sourcing</li>
 <li>How does Event Sourcing work?</li>
-<li>Considering Event Sourcing</li>
+<li>Caveats of Event Sourcing</li>
+<li>Should we do Event Sourcing?</li>
 <li>Cool projects to watch</li>
 </ul>
-<h3>Unfortunately we won't be able to cover</h3>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Event Sourcing vs Active Record&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/05-event-sourcing-vs-active-record/00-event-sourcing-vs-active-record.md&#39;, &#39;title&#39;: &#39;event-sourcing-vs-active-record/00-event-sourcing-vs-active-record.md&#39;} -->
+	    <section class="slide"  id="event-sourcing-vs-active-record/00-event-sourcing-vs-active-record.md" >
+			
+				
+					<h1>Event Sourcing vs Active Record</h1>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Event Sourcing vs Active Record&lt;/h2&gt;\n&lt;p&gt;We all know Active Record:&lt;/p&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Object-Relational mapping&quot; src=&quot;static/img/or-mapping.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/05-event-sourcing-vs-active-record/01-event-sourcing-vs-active-record.md&#39;, &#39;title&#39;: &#39;event-sourcing-vs-active-record/01-event-sourcing-vs-active-record.md&#39;} -->
+	    <section class="slide"  id="event-sourcing-vs-active-record/01-event-sourcing-vs-active-record.md" >
+			
+				
+					<h2>Event Sourcing vs Active Record</h2>
+<p>We all know Active Record:</p>
+<p class="slide"><img alt="Object-Relational mapping" src="static/img/or-mapping.png" /></p>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Event Sourcing is different&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Don\&#39;t save the &lt;strong&gt;current state&lt;/strong&gt; of objects&lt;/li&gt;\n&lt;li&gt;Save the &lt;strong&gt;Events&lt;/strong&gt; that lead to the current state&lt;/li&gt;\n&lt;/ul&gt;\n&lt;div class=&quot;slide&quot;&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;Event&lt;/strong&gt;: Something that happend &lt;em&gt;in the past&lt;/em&gt;.&lt;/li&gt;\n&lt;li&gt;E.G. &lt;img alt=&quot;Deposit Performed Event in UML&quot; src=&quot;static/img/deposit-performed-event-v1.png&quot; /&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;!-- http://www.yuml.me/diagram/scruffy;/class/edit/[DepositPerformed|amount;accountNumber] --&gt;\n\n&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/05-event-sourcing-vs-active-record/03-event-sourcing-is-different.md&#39;, &#39;title&#39;: &#39;event-sourcing-vs-active-record/03-event-sourcing-is-different.md&#39;} -->
+	    <section class="slide"  id="event-sourcing-vs-active-record/03-event-sourcing-is-different.md" >
+			
+				
+					<h2>Event Sourcing is different</h2>
 <ul>
-<li>How we do ES</li>
+<li>Don't save the <strong>current state</strong> of objects</li>
+<li>Save the <strong>Events</strong> that lead to the current state</li>
+</ul>
+<div class="slide">
+
+<ul>
+<li><strong>Event</strong>: Something that happend <em>in the past</em>.</li>
+<li>E.G. <img alt="Deposit Performed Event in UML" src="static/img/deposit-performed-event-v1.png" /></li>
+</ul>
+<!-- http://www.yuml.me/diagram/scruffy;/class/edit/[DepositPerformed|amount;accountNumber] -->
+
+</div>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;The advantages of Event Sourcing&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/06-event-sourcing-advantages/00-event-sourcing-advantages.md&#39;, &#39;title&#39;: &#39;event-sourcing-advantages/00-event-sourcing-advantages.md&#39;} -->
+	    <section class="slide"  id="event-sourcing-advantages/00-event-sourcing-advantages.md" >
+			
+				
+					<h1>The advantages of Event Sourcing</h1>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;The advantages of Event Sourcing&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Complete log of every state change&lt;/li&gt;\n&lt;li&gt;Unmached debugability&lt;/li&gt;\n&lt;li&gt;Very good performance characteristics&lt;/li&gt;\n&lt;li&gt;No more mapping Objects to Tables&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-event-sourcing-advantages/01-all-advantages.md&#39;, &#39;title&#39;: &#39;event-sourcing-advantages/01-all-advantages.md&#39;} -->
+	    <section class="slide"  id="event-sourcing-advantages/01-all-advantages.md" >
+			
+				
+					<h2>The advantages of Event Sourcing</h2>
+<ul>
+<li>Complete log of every state change</li>
+<li>Unmached debugability</li>
+<li>Very good performance characteristics</li>
+<li>No more mapping Objects to Tables</li>
 </ul>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Getting to know you&lt;/h2&gt;\n&lt;p&gt;Would you agree?&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;Our domain is mostly just CRUD operations&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Our business objects map neatly to our DB Tables&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;We use Hibernate (or another ORM) for O-R Mapping&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;We have a sh*tload of services, mutating business objects&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;We do Domain-Driven Design&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/04-getting-to-know-you.md&#39;, &#39;title&#39;: &#39;getting-to-know-you.md&#39;} -->
-	    <section class="slide"  id="getting-to-know-you.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Mapping objects to tables is suprisingly hard&lt;/h2&gt;\n&lt;div class=&quot;container_12&quot;&gt;\n    &lt;div class=&quot;grid_4&quot;&gt;\n        &lt;a href=&quot;http://martinfowler.com/books/eaa.html&quot;&gt;\n            &lt;img src=&quot;static/img/eaa.jpg&quot;&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid_8&quot;&gt;\n        &lt;ul&gt;\n            &lt;li&gt;143 pages on mapping objects to tables&lt;/li&gt;\n            &lt;li&gt;Recommends using ORM-Tools only for CRUD-heavy applications&lt;/li&gt;\n            &lt;li class=&quot;slide&quot;&gt;Why?&lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/div&gt;\n&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/06-event-sourcing-advantages/02-mapping-O-to-R-is-hard.md&#39;, &#39;title&#39;: &#39;event-sourcing-advantages/02-mapping-O-to-R-is-hard.md&#39;} -->
+	    <section class="slide"  id="event-sourcing-advantages/02-mapping-O-to-R-is-hard.md" >
 			
 				
-					<h2>Getting to know you</h2>
-<p>Would you agree?</p>
-<ul>
-<li class="slide">Our domain is mostly just CRUD operations</li>
-<li class="slide">Our business objects map neatly to our DB Tables</li>
-<li class="slide">We use Hibernate (or another ORM) for O-R Mapping</li>
-<li class="slide">We have a sh*tload of services, mutating business objects</li>
-<li class="slide">We do Domain-Driven Design</li>
-</ul>
-				
-	  		
-	    </section>
-	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Mapping O to R is suprisingly hard&lt;/h2&gt;\n&lt;div class=&quot;container_12&quot;&gt;\n    &lt;div class=&quot;grid_4&quot;&gt;\n        &lt;a href=&quot;http://martinfowler.com/books/eaa.html&quot;&gt;\n            &lt;img src=&quot;static/img/eaa.jpg&quot;&gt;\n        &lt;/a&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid_8&quot;&gt;\n        &lt;ul&gt;\n            &lt;li&gt;143 pages on mapping O to R&lt;/li&gt;\n            &lt;li&gt;Recommends using ORM-Tools only for CRUD-heavy applications&lt;/li&gt;\n            &lt;li class=&quot;slide&quot;&gt;Why?&lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/div&gt;\n&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/05-mismatch/01-mapping-O-to-R-is-hard.md&#39;, &#39;title&#39;: &#39;mismatch/01-mapping-O-to-R-is-hard.md&#39;} -->
-	    <section class="slide"  id="mismatch/01-mapping-O-to-R-is-hard.md" >
-			
-				
-					<h2>Mapping O to R is suprisingly hard</h2>
+					<h2>Mapping objects to tables is suprisingly hard</h2>
 <div class="container_12">
     <div class="grid_4">
         <a href="http://martinfowler.com/books/eaa.html">
@@ -150,7 +212,7 @@
     </div>
     <div class="grid_8">
         <ul>
-            <li>143 pages on mapping O to R</li>
+            <li>143 pages on mapping objects to tables</li>
             <li>Recommends using ORM-Tools only for CRUD-heavy applications</li>
             <li class="slide">Why?</li>
         </ul>
@@ -160,8 +222,8 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;The Object-Relational mismatch&lt;/h2&gt;\n&lt;p&gt;&lt;a href=&quot;https://twitter.com/unclebobmartin/status/384682249301811200&quot;&gt;&lt;img alt=&quot;The biggest problem with ORM\&#39;s is that they don\&#39;t really map O to R. Tables _are not_ objects. They never were; and never will be.&quot; src=&quot;static/img/uncle-bob-tweet.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/05-mismatch/02-uncle-bob-citation.md&#39;, &#39;title&#39;: &#39;mismatch/02-uncle-bob-citation.md&#39;} -->
-	    <section class="slide"  id="mismatch/02-uncle-bob-citation.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;The Object-Relational mismatch&lt;/h2&gt;\n&lt;p&gt;&lt;a href=&quot;https://twitter.com/unclebobmartin/status/384682249301811200&quot;&gt;&lt;img alt=&quot;The biggest problem with ORM\&#39;s is that they don\&#39;t really map O to R. Tables _are not_ objects. They never were; and never will be.&quot; src=&quot;static/img/uncle-bob-tweet.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-event-sourcing-advantages/03-uncle-bob-citation.md&#39;, &#39;title&#39;: &#39;event-sourcing-advantages/03-uncle-bob-citation.md&#39;} -->
+	    <section class="slide"  id="event-sourcing-advantages/03-uncle-bob-citation.md" >
 			
 				
 					<h2>The Object-Relational mismatch</h2>
@@ -170,44 +232,16 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;What is Event Sourcing?&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/00-what-is-event-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/00-what-is-event-sourcing.md&#39;} -->
-	    <section class="slide"  id="how-eventsourcing-works/00-what-is-event-sourcing.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;How does Event Sourcing work?&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/00-how-event-sourcing-works.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/00-how-event-sourcing-works.md&#39;} -->
+	    <section class="slide"  id="how-eventsourcing-works/00-how-event-sourcing-works.md" >
 			
 				
-					<h1>What is Event Sourcing?</h1>
+					<h1>How does Event Sourcing work?</h1>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;What is Event Sourcing?&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;An alternate way to save data &lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Mapping of objects to a stream of events, not to tables &lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Thus bypasses the Object-Relational Impedence Mismatch &lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/01-what-is-event-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/01-what-is-event-sourcing.md&#39;} -->
-	    <section class="slide"  id="how-eventsourcing-works/01-what-is-event-sourcing.md" >
-			
-				
-					<h2>What is Event Sourcing?</h2>
-<ul>
-<li>An alternate way to save data </li>
-<li class="slide">Mapping of objects to a stream of events, not to tables </li>
-<li class="slide">Thus bypasses the Object-Relational Impedence Mismatch </li>
-</ul>
-				
-	  		
-	    </section>
-	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;What is an Event?&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Something that happend &lt;em&gt;in the past&lt;/em&gt;.&lt;/li&gt;\n&lt;li&gt;E.G. &lt;img alt=&quot;Deposit Performed Event in UML&quot; src=&quot;static/img/deposit-performed-event-v1.png&quot; /&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;!-- http://www.yuml.me/diagram/scruffy;/class/edit/[DepositPerformed|amount;accountNumber] --&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/02-what-is-an-event.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/02-what-is-an-event.md&#39;} -->
-	    <section class="slide"  id="how-eventsourcing-works/02-what-is-an-event.md" >
-			
-				
-					<h2>What is an Event?</h2>
-<ul>
-<li>Something that happend <em>in the past</em>.</li>
-<li>E.G. <img alt="Deposit Performed Event in UML" src="static/img/deposit-performed-event-v1.png" /></li>
-</ul>
-<!-- http://www.yuml.me/diagram/scruffy;/class/edit/[DepositPerformed|amount;accountNumber] -->
-				
-	  		
-	    </section>
-	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Saving objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Create an event for every state change of the object:&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;Persist this stream of events, preserving their order&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/03-saving-objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/03-saving-objects.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Saving objects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Create an event for every state change of the object:&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;Persist this stream of events, preserving event order&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/03-saving-objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/03-saving-objects.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/03-saving-objects.md" >
 			
 				
@@ -217,24 +251,24 @@
 </ul>
 <p class="slide"><img alt="Eventstream" src="static/img/eventstream.png" /></p>
 <ul>
-<li class="slide">Persist this stream of events, preserving their order</li>
+<li class="slide">Persist this stream of events, preserving event order</li>
 </ul>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring objects&lt;/h2&gt;\n&lt;p&gt;Subsequently apply the events from the respective &lt;code&gt;EventStream&lt;/code&gt; to a fresh object instance&lt;/p&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-0.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-0.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring objects&lt;/h2&gt;\n&lt;p&gt;Subsequently apply the events from the respective &lt;code&gt;EventStream&lt;/code&gt; to a &quot;blank&quot; object instance&lt;/p&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/04-restoring-objects-0.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-0.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-0.md" >
 			
 				
 					<h2>Restoring objects</h2>
-<p>Subsequently apply the events from the respective <code>EventStream</code> to a fresh object instance</p>
+<p>Subsequently apply the events from the respective <code>EventStream</code> to a "blank" object instance</p>
 <p><img alt="Eventstream" src="static/img/eventstream.png" /></p>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring objects&lt;/h2&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 1&quot; src=&quot;static/img/restore-from-eventstream-1.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-1.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-1.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring objects&lt;/h2&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 1&quot; src=&quot;static/img/restore-from-eventstream-1.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/04-restoring-objects-1.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-1.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-1.md" >
 			
 				
@@ -244,7 +278,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring objects&lt;/h2&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 2&quot; src=&quot;static/img/restore-from-eventstream-2.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-2.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-2.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring objects&lt;/h2&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 2&quot; src=&quot;static/img/restore-from-eventstream-2.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/04-restoring-objects-2.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-2.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-2.md" >
 			
 				
@@ -254,7 +288,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring objects&lt;/h2&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 3&quot; src=&quot;static/img/restore-from-eventstream-3.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-3.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-3.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring objects&lt;/h2&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 3&quot; src=&quot;static/img/restore-from-eventstream-3.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/04-restoring-objects-3.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-3.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-3.md" >
 			
 				
@@ -264,7 +298,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring objects&lt;/h2&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 4&quot; src=&quot;static/img/restore-from-eventstream-4.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-4.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-4.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Restoring objects&lt;/h2&gt;\n&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 4&quot; src=&quot;static/img/restore-from-eventstream-4.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/04-restoring-objects-4.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-4.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-4.md" >
 			
 				
@@ -274,7 +308,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 2&quot; src=&quot;static/img/restore-from-eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/04-restoring-objects-5.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-5.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;p&gt;&lt;img alt=&quot;Restore from EventStream 2&quot; src=&quot;static/img/restore-from-eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/04-restoring-objects-5.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/04-restoring-objects-5.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/04-restoring-objects-5.md" >
 			
 				
@@ -283,7 +317,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Updating objects&lt;/h2&gt;\n&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accountRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;withdraw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Euro&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;\n&lt;span class=&quot;n&quot;&gt;accountRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;\n\n\n&lt;p&gt;What should be persisted?&lt;/p&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Updating EventStream&quot; src=&quot;static/img/eventstream-update.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/05-updating objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/05-updating objects.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Updating objects&lt;/h2&gt;\n&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accountRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;withdraw&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Euro&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;\n&lt;span class=&quot;n&quot;&gt;accountRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;\n\n\n&lt;p&gt;What should be persisted?&lt;/p&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Updating EventStream&quot; src=&quot;static/img/eventstream-update.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/05-updating objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/05-updating objects.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/05-updating objects.md" >
 			
 				
@@ -300,7 +334,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Deleting objects&lt;/h2&gt;\n&lt;p&gt;How do you delete an object?&lt;/p&gt;\n&lt;p  class=&quot;slide&quot;&gt;\n&lt;img src=&quot;static/img/bank-account-closed-event.png&quot; style=&quot;margin:0px&quot;/&gt;\n&lt;/p&gt;\n\n&lt;p class=&quot;slide&quot;&gt;&lt;a href=&quot;http://martinfowler.com/eaaDev/RetroactiveEvent.html&quot;&gt;Retroactive Event&lt;/a&gt;. An event undoing something that happened in the past&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/06-deleting-objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/06-deleting-objects.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Deleting objects&lt;/h2&gt;\n&lt;p&gt;How do you delete an object?&lt;/p&gt;\n&lt;p  class=&quot;slide&quot;&gt;\n&lt;img src=&quot;static/img/bank-account-closed-event.png&quot; style=&quot;margin:0px&quot;/&gt;\n&lt;/p&gt;\n\n&lt;p class=&quot;slide&quot;&gt;&lt;a href=&quot;http://martinfowler.com/eaaDev/RetroactiveEvent.html&quot;&gt;Retroactive Event&lt;/a&gt;. An event undoing something that happened in the past&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/06-deleting-objects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/06-deleting-objects.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/06-deleting-objects.md" >
 			
 				
@@ -315,7 +349,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Event Sourcing vs Command Sourcing&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Command Sourcing and Event Sourcing are very similar&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Terms tend to get confused on the web&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;&lt;a href=&quot;http://www.martinfowler.com/eaaDev/EventSourcing.html&quot;&gt;Martin Fowler&lt;/a&gt; wrote about what we call Command Sourcing&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Event Sourcing vs Command Sourcing&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Command Sourcing and Event Sourcing are very similar&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Terms tend to get confused on the web&lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;&lt;a href=&quot;http://www.martinfowler.com/eaaDev/EventSourcing.html&quot;&gt;Martin Fowler&lt;/a&gt; wrote about what we refer to as Command Sourcing&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/07-event-sourcing-vs-command-sourcing.md" >
 			
 				
@@ -323,13 +357,13 @@
 <ul>
 <li>Command Sourcing and Event Sourcing are very similar</li>
 <li class="slide">Terms tend to get confused on the web</li>
-<li class="slide"><a href="http://www.martinfowler.com/eaaDev/EventSourcing.html">Martin Fowler</a> wrote about what we call Command Sourcing</li>
+<li class="slide"><a href="http://www.martinfowler.com/eaaDev/EventSourcing.html">Martin Fowler</a> wrote about what we refer to as Command Sourcing</li>
 </ul>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Command Sourcing&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Command pattern as defined in &quot;Design Patterns&quot;&lt;/li&gt;\n&lt;li&gt;Command names are imperative &quot;do something!&quot;&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/08-command-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/08-command-sourcing.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Command Sourcing&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Command pattern as defined in &quot;Design Patterns&quot;&lt;/li&gt;\n&lt;li&gt;Command names are imperative &quot;do something!&quot;&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/08-command-sourcing.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/08-command-sourcing.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/08-command-sourcing.md" >
 			
 				
@@ -342,7 +376,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Command&lt;/span&gt;\n\n\n\n&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BankAccountCommandHandler&lt;/span&gt;\n\n     &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BankAccountRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accountId&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/09-command-sourcing-example.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/09-command-sourcing-example.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Command&lt;/span&gt;\n\n\n\n&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BankAccountCommandHandler&lt;/span&gt;\n\n     &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BankAccountRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accountId&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/09-command-sourcing-example.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/09-command-sourcing-example.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/09-command-sourcing-example.md" >
 			
 				
@@ -376,7 +410,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Command Sourcing&lt;/h2&gt;\n&lt;h3 class=&quot;pros&quot;&gt;Pros&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;A bit easier to implement&lt;/li&gt;\n&lt;li&gt;Command log doubles as full audit log&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3 class=&quot;cons&quot;&gt;Cons&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Replaying may inflict unexpected side effects&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/10-command-sourcing-advantages.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/10-command-sourcing-advantages.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Command Sourcing&lt;/h2&gt;\n&lt;h3 class=&quot;pros&quot;&gt;Pros&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;A bit easier to implement&lt;/li&gt;\n&lt;li&gt;Command log doubles as full audit log&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3 class=&quot;cons&quot;&gt;Cons&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Replaying may inflict unexpected side effects&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/10-command-sourcing-advantages.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/10-command-sourcing-advantages.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/10-command-sourcing-advantages.md" >
 			
 				
@@ -394,7 +428,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Dealing with side effects&lt;/h2&gt;\n&lt;p&gt;How do we deal with side effects?&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;Leave side effect to the Command Handler &lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Record result as domain event, if necessary &lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/11-side-effects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/11-side-effects.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Dealing with side effects&lt;/h2&gt;\n&lt;p&gt;How do we deal with side effects?&lt;/p&gt;\n&lt;ul&gt;\n&lt;li class=&quot;slide&quot;&gt;Leave side effect to the Command Handler &lt;/li&gt;\n&lt;li class=&quot;slide&quot;&gt;Record result as domain event, if necessary &lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/11-side-effects.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/11-side-effects.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/11-side-effects.md" >
 			
 				
@@ -408,7 +442,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BrokerCommandHandler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bankInterface&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BankInterface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;\n\n                            &lt;span class=&quot;n&quot;&gt;orderBookRepository&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;OrderBookRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;PerformBuyOrder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderBookRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderBookId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;validationResult&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bankInterface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;validationResult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;succeeded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InvalidOrderException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;validationResult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderConfirmation&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bankInterface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderPerformedEvent&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OrderSentToBank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderConfirmation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderPerformedEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;orderBookRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n\n\n&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OrderBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orders&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Seq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Order&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Seq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderSentToBank&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;OrderSentToBank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;OrderBook&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orders&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderSentToBank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/06-how-eventsourcing-works/12-side-effects-example.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/12-side-effects-example.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BrokerCommandHandler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bankInterface&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BankInterface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;\n\n                            &lt;span class=&quot;n&quot;&gt;orderBookRepository&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;OrderBookRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;PerformBuyOrder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderBookRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderBookId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;validationResult&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bankInterface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;validationResult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;succeeded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InvalidOrderException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;validationResult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderConfirmation&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bankInterface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderPerformedEvent&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OrderSentToBank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderConfirmation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderPerformedEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;orderBookRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n\n\n&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OrderBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orders&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Seq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Order&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Seq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderSentToBank&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;OrderSentToBank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;OrderBook&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orders&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderSentToBank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/07-how-eventsourcing-works/12-side-effects-example.md&#39;, &#39;title&#39;: &#39;how-eventsourcing-works/12-side-effects-example.md&#39;} -->
 	    <section class="slide"  id="how-eventsourcing-works/12-side-effects-example.md" >
 			
 				
@@ -458,7 +492,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Considering Event Sourcing&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/00-considering-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/00-considering-event-sourcing.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Considering Event Sourcing&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/08-should-i-do-event-sourcing/00-considering-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/00-considering-event-sourcing.md&#39;} -->
 	    <section class="slide"  id="should-i-do-event-sourcing/00-considering-event-sourcing.md" >
 			
 				
@@ -467,7 +501,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Pros and Cons of Event/Command Sourcing&lt;/h2&gt;\n&lt;h3&gt;Pros&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Bypass the O-R Impedance Mismatch&lt;/li&gt;\n&lt;li&gt;Allows for easy undo mechanism&lt;/li&gt;\n&lt;li&gt;Debuggability and accountability&lt;/li&gt;\n&lt;li&gt;After-the-fact mining of Event Streams&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3&gt;Cons&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Awkward to query Domain Model (solved by CQRS)&lt;/li&gt;\n&lt;li&gt;Takes a bit of getting used to&lt;/li&gt;\n&lt;li&gt;Much less framework/community/vendor support&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Pros and Cons of Event/Command Sourcing&lt;/h2&gt;\n&lt;h3&gt;Pros&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Bypass the O-R Impedance Mismatch&lt;/li&gt;\n&lt;li&gt;Allows for easy undo mechanism&lt;/li&gt;\n&lt;li&gt;Debuggability and accountability&lt;/li&gt;\n&lt;li&gt;After-the-fact mining of Event Streams&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h3&gt;Cons&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Awkward to query Domain Model (solved by CQRS)&lt;/li&gt;\n&lt;li&gt;Takes a bit of getting used to&lt;/li&gt;\n&lt;li&gt;Much less framework/community/vendor support&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/08-should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md&#39;} -->
 	    <section class="slide"  id="should-i-do-event-sourcing/01-pros-and-cons-of-event-sourcing.md" >
 			
 				
@@ -489,7 +523,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Debugging and accountability&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Every change to state is traceable&lt;/li&gt;\n&lt;li&gt;You know how the system got into the current state&lt;/li&gt;\n&lt;li&gt;Metadata like &quot;who did that&quot; and &quot;when did it happen&quot; &lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/02-debugging-and-accountability.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/02-debugging-and-accountability.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Debugging and accountability&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Every change to state is traceable&lt;/li&gt;\n&lt;li&gt;You know how the system got into the current state&lt;/li&gt;\n&lt;li&gt;Metadata like &quot;who did that&quot; and &quot;when did it happen&quot; &lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/08-should-i-do-event-sourcing/02-debugging-and-accountability.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/02-debugging-and-accountability.md&#39;} -->
 	    <section class="slide"  id="should-i-do-event-sourcing/02-debugging-and-accountability.md" >
 			
 				
@@ -504,7 +538,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Retrospective mining of Event Streams&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Collection of previously uncollected metrics and infos is possible&lt;/li&gt;\n&lt;li&gt;E.G. A recommendation engine that recommends customers items, they removed from their shopping cart&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/03-mining-event-streams.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/03-mining-event-streams.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Retrospective mining of Event Streams&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Collection of previously uncollected metrics and infos is possible&lt;/li&gt;\n&lt;li&gt;E.G. A recommendation engine that recommends customers items, they removed from their shopping cart&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/eventstream.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/08-should-i-do-event-sourcing/03-mining-event-streams.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/03-mining-event-streams.md&#39;} -->
 	    <section class="slide"  id="should-i-do-event-sourcing/03-mining-event-streams.md" >
 			
 				
@@ -518,7 +552,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Should I be doing Event Sourcing?&lt;/h2&gt;\n&lt;p&gt;Event Sourcing is probably a good fit when you are:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;experienced in Domain-Driven Design &lt;/li&gt;\n&lt;li&gt;building a system doing more than simple CRUD&lt;/li&gt;\n&lt;li&gt;the accountability/debuggability is critical&lt;/li&gt;\n&lt;li&gt;deriving a competitive edge from the data&lt;/li&gt;\n&lt;li&gt;building a scaleable system based on CQRS princples&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/07-should-i-do-event-sourcing/04-should-i-be-doing-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/04-should-i-be-doing-event-sourcing.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Should I be doing Event Sourcing?&lt;/h2&gt;\n&lt;p&gt;Event Sourcing is probably a good fit when you are:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;experienced in Domain-Driven Design &lt;/li&gt;\n&lt;li&gt;building a system doing more than simple CRUD&lt;/li&gt;\n&lt;li&gt;the accountability/debuggability is critical&lt;/li&gt;\n&lt;li&gt;deriving a competitive edge from the data&lt;/li&gt;\n&lt;li&gt;building a scaleable system based on CQRS princples&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/08-should-i-do-event-sourcing/04-should-i-be-doing-event-sourcing.md&#39;, &#39;title&#39;: &#39;should-i-do-event-sourcing/04-should-i-be-doing-event-sourcing.md&#39;} -->
 	    <section class="slide"  id="should-i-do-event-sourcing/04-should-i-be-doing-event-sourcing.md" >
 			
 				

@@ -1,0 +1,1 @@
+![Restore from EventStream 2](static/img/restore-from-eventstream.png)

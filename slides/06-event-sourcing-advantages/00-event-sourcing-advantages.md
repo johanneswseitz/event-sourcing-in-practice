@@ -1,0 +1,1 @@
+# The advantages of Event Sourcing
