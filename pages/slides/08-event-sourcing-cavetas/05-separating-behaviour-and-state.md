@@ -3,6 +3,6 @@
 Operations split into pure functions:
 
 * Executing commands on an Objects produces events.
-	(Command, Object) => Events
+	`(Command, Object) => Events`
 * Applying events causes state to change
-	(Events, Object) => Object'
+	`(Events, Object) => Object'`
