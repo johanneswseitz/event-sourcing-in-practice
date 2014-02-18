@@ -4,7 +4,7 @@ present: build
 start: build
 	cactus serve
 
-build: test-code
+build: 
 	cactus build
 	
 test-code:

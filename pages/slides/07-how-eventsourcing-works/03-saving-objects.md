@@ -5,6 +5,6 @@
 ![Eventstream](static/img/eventstream.png)
 {.slide}
 
-- Persist this stream of events, preserving their order
+- Persist this stream of events, preserving event order
 {.slide}
 
