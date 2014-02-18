@@ -116,19 +116,16 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Structure&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Active Record vs. Event Sourcing&lt;/li&gt;\n&lt;li&gt;The advantages of Event Sourcing&lt;/li&gt;\n&lt;li&gt;How does Event Sourcing work?&lt;/li&gt;\n&lt;li&gt;Caveats of Event Sourcing&lt;/li&gt;\n&lt;li&gt;Considering Event Sourcing&lt;/li&gt;\n&lt;li&gt;(Bonus) Cool projects to watch&lt;/li&gt;\n&lt;li&gt;(Bonus) Links to resources&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/04-structure.md&#39;, &#39;title&#39;: &#39;structure.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Structure&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;How Event Sourcing is different &lt;/li&gt;\n&lt;li&gt;Advantages of Event Sourcing&lt;/li&gt;\n&lt;li&gt;Making Event Sourcing work&lt;/li&gt;\n&lt;li&gt;Some things to consider&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/04-structure.md&#39;, &#39;title&#39;: &#39;structure.md&#39;} -->
 	    <section class="slide"  id="structure.md" >
 			
 				
 					<h2>Structure</h2>
 <ul>
-<li>Active Record vs. Event Sourcing</li>
-<li>The advantages of Event Sourcing</li>
-<li>How does Event Sourcing work?</li>
-<li>Caveats of Event Sourcing</li>
-<li>Considering Event Sourcing</li>
-<li>(Bonus) Cool projects to watch</li>
-<li>(Bonus) Links to resources</li>
+<li>How Event Sourcing is different </li>
+<li>Advantages of Event Sourcing</li>
+<li>Making Event Sourcing work</li>
+<li>Some things to consider</li>
 </ul>
 				
 	  		
@@ -462,7 +459,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&quot;&lt;h2&gt;Separating behaviour and state&lt;/h2&gt;\n&lt;p&gt;Operations split into pure functions:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;Executing commands on an Objects produces events.\n    (Command, Object) =&amp;gt; Events&lt;/li&gt;\n&lt;li&gt;Applying events causes state to change\n    (Events, Object) =&amp;gt; Object&#39;&lt;/li&gt;\n&lt;/ul&gt;&quot;, &#39;path&#39;: &#39;slides/08-event-sourcing-cavetas/05-separating-behaviour-and-state.md&#39;, &#39;title&#39;: &#39;event-sourcing-cavetas/05-separating-behaviour-and-state.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&quot;&lt;h2&gt;Separating behaviour and state&lt;/h2&gt;\n&lt;p&gt;Operations split into pure functions:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;Executing commands on an Objects produces events.\n    &lt;code&gt;(Command, Object) =&amp;gt; Events&lt;/code&gt;&lt;/li&gt;\n&lt;li&gt;Applying events causes state to change\n    &lt;code&gt;(Events, Object) =&amp;gt; Object&#39;&lt;/code&gt;&lt;/li&gt;\n&lt;/ul&gt;&quot;, &#39;path&#39;: &#39;slides/08-event-sourcing-cavetas/05-separating-behaviour-and-state.md&#39;, &#39;title&#39;: &#39;event-sourcing-cavetas/05-separating-behaviour-and-state.md&#39;} -->
 	    <section class="slide"  id="event-sourcing-cavetas/05-separating-behaviour-and-state.md" >
 			
 				
@@ -470,9 +467,9 @@
 <p>Operations split into pure functions:</p>
 <ul>
 <li>Executing commands on an Objects produces events.
-    (Command, Object) =&gt; Events</li>
+    <code>(Command, Object) =&gt; Events</code></li>
 <li>Applying events causes state to change
-    (Events, Object) =&gt; Object'</li>
+    <code>(Events, Object) =&gt; Object'</code></li>
 </ul>
 				
 	  		
