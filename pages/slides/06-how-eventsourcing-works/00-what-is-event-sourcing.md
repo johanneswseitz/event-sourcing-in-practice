@@ -1,1 +1,0 @@
-# What is Event Sourcing?

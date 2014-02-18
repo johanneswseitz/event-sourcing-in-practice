@@ -1,4 +1,4 @@
-## Mapping O to R is suprisingly hard
+## Mapping Objects to Tables is suprisingly hard
 
 <div class="container_12">
 	<div class="grid_4">
@@ -8,7 +8,7 @@
 	</div>
 	<div class="grid_8">
 		<ul>
-			<li>143 pages on mapping O to R</li>
+			<li>143 pages on mapping Objects to Tables</li>
 			<li>Recommends using ORM-Tools only for CRUD-heavy applications</li>
 			<li class="slide">Why?</li>
 		</ul>
