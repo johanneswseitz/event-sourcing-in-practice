@@ -3,4 +3,4 @@
 * Complete log of every state change
 * Unmached debugability
 * Very good performance characteristics
-* No more mapping Objects to Tables
+* No more mapping objects to tables
