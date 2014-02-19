@@ -6,14 +6,13 @@ import java.util.UUID
 case class ChangeOwner(accountID: UUID, newOwner:String)
   extends Command
 
-class BankAccountCommandHandler
-     (bankAccountRepo:BankAccountRepository) {
+class BankAccountCommandHandler(repo:BankAccountRepository) {
   def handle(changeOwner:ChangeOwner) {
     val accountId = changeOwner.accountID
     val newOwner = changeOwner.newOwner
-    val account = bankAccountRepo.getAccount(accountId)
+    val account = repo.getAccount(accountId)
     val modifiedAccount = account.changeOwner(newOwner)
-    bankAccountRepo.saveAccount(modifiedAccount)
+    repo.saveAccount(modifiedAccount)
   }
 }
 // changeOwnerCommand

@@ -16,21 +16,21 @@ object OrderSentToBank {
 
 // dealingWithSideEffects
 
-class BrokerCommandHandler (bankInterface:BankInterface,
-                            orderBookRepository:OrderBookRepository) {
-
+class BrokerCommandHandler(bank:BankInterface,
+                           repo:OrderBookRepository) {
   def handle(buyCommand:PerformBuyOrder) = {
-    var orderBook = orderBookRepository.load(buyCommand.orderBookId)
-    val validationResult = bankInterface.validate(buyCommand.order)
+    var orderBook = repo.load(buyCommand.orderBookId)
+    val validationResult = bank.validate(buyCommand.order)
     if (!validationResult.succeeded)
       throw new InvalidOrderException(validationResult)
 
-    val orderConfirmation = bankInterface.perform(buyCommand.order)
-    val orderPerformedEvent = OrderSentToBank.from(orderConfirmation)
-    orderBook = orderBook.handle(orderPerformedEvent)
-    orderBookRepository.save(orderBook)
+    val confirmation = bank.perform(buyCommand.order)
+    val orderDoneEvent = OrderSentToBank.from(confirmation)
+    orderBook = orderBook.handle(orderDoneEvent)
+    repo.save(orderBook)
   }
 }
+// dealingWithSideEffects
 
 case class OrderBook(orders:Seq[Order] = Seq.empty) {
   def handle(orderSentToBank:OrderSentToBank) : OrderBook = {
@@ -38,7 +38,6 @@ case class OrderBook(orders:Seq[Order] = Seq.empty) {
   }
 }
 
-// dealingWithSideEffects
 
 trait BankInterface {
   def validate(order:BuyOrder) : ValidationResult

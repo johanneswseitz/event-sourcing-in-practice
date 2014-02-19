@@ -1,1 +1,0 @@
-# Caveats of Event Sourcing
