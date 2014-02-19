@@ -347,149 +347,71 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Caveats of Event Sourcing&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/08-event-sourcing-cavetas/00-event-sourcing-caveats.md&#39;, &#39;title&#39;: &#39;event-sourcing-cavetas/00-event-sourcing-caveats.md&#39;} -->
-	    <section class="slide"  id="event-sourcing-cavetas/00-event-sourcing-caveats.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h1&gt;Making Event Sourcing work&lt;/h1&gt;&#39;, &#39;path&#39;: &#39;slides/08-making-eventsourcing-work/00-making-eventsourcing-work.md&#39;, &#39;title&#39;: &#39;making-eventsourcing-work/00-making-eventsourcing-work.md&#39;} -->
+	    <section class="slide"  id="making-eventsourcing-work/00-making-eventsourcing-work.md" >
 			
 				
-					<h1>Caveats of Event Sourcing</h1>
+					<h1>Making Event Sourcing work</h1>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Caveats of Event Sourcing&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Confusing Event Sourcing and Command Sourcing&lt;/li&gt;\n&lt;li&gt;Replaying events without side-effects&lt;/li&gt;\n&lt;li&gt;Reporting and Queries&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/08-event-sourcing-cavetas/01-event-sourcing-caveats.md&#39;, &#39;title&#39;: &#39;event-sourcing-cavetas/01-event-sourcing-caveats.md&#39;} -->
-	    <section class="slide"  id="event-sourcing-cavetas/01-event-sourcing-caveats.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Problem: Side-effects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;We don\&#39;t want side-effects to be replayed&lt;ul&gt;\n&lt;li&gt;E-Mails sent twice, orders placed etc.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/li&gt;\n&lt;/ul&gt;\n&lt;div class=&quot;slide&quot;&gt;\n\n&lt;h3&gt;Solutions&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Split side-effects &amp;amp; behaviour&lt;/li&gt;\n&lt;li&gt;Saving Events triggers Side-effects&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/08-making-eventsourcing-work/02-side-effects.md&#39;, &#39;title&#39;: &#39;making-eventsourcing-work/02-side-effects.md&#39;} -->
+	    <section class="slide"  id="making-eventsourcing-work/02-side-effects.md" >
 			
 				
-					<h2>Caveats of Event Sourcing</h2>
+					<h2>Problem: Side-effects</h2>
 <ul>
-<li>Confusing Event Sourcing and Command Sourcing</li>
-<li>Replaying events without side-effects</li>
-<li>Reporting and Queries</li>
-</ul>
-				
-	  		
-	    </section>
-	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Command Sourcing&lt;/h2&gt;\n&lt;div class=&quot;container_12&quot;&gt;\n    &lt;div class=&quot;grid_6&quot;&gt;\n        &lt;h3&gt;Event Sourcing&lt;/h3&gt;\n        &lt;ul&gt;\n            &lt;li&gt;Persist only changes in state&lt;/li&gt;\n        &lt;/ul&gt;\n        &lt;img src=&quot;static/img/deposit-performed-event-v1.png&quot;/&gt;\n        &lt;ul&gt;\n            &lt;li&gt;Bit harder to implement&lt;/li&gt;\n            &lt;li&gt;Replay may be side-effect free&lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid_6&quot;&gt;\n        &lt;h3&gt;Command Sourcing&lt;/h3&gt;\n        &lt;ul&gt;\n            &lt;li&gt;Persist Commands&lt;/li&gt;\n        &lt;/ul&gt;\n        &lt;img src=&quot;static/img/perform-deposit-command.png&quot;/&gt;\n        &lt;ul&gt;\n            &lt;li&gt;Easier to implement&lt;/li&gt;\n            &lt;li&gt;Would replay side-effects&lt;/li&gt;\n        &lt;/ul&gt;\n    &lt;/div&gt;\n&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/08-event-sourcing-cavetas/02-confusing-event-sourcing-with-command-sourcing.md&#39;, &#39;title&#39;: &#39;event-sourcing-cavetas/02-confusing-event-sourcing-with-command-sourcing.md&#39;} -->
-	    <section class="slide"  id="event-sourcing-cavetas/02-confusing-event-sourcing-with-command-sourcing.md" >
-			
-				
-					<h2>Command Sourcing</h2>
-<div class="container_12">
-    <div class="grid_6">
-        <h3>Event Sourcing</h3>
-        <ul>
-            <li>Persist only changes in state</li>
-        </ul>
-        <img src="static/img/deposit-performed-event-v1.png"/>
-        <ul>
-            <li>Bit harder to implement</li>
-            <li>Replay may be side-effect free</li>
-        </ul>
-    </div>
-    <div class="grid_6">
-        <h3>Command Sourcing</h3>
-        <ul>
-            <li>Persist Commands</li>
-        </ul>
-        <img src="static/img/perform-deposit-command.png"/>
-        <ul>
-            <li>Easier to implement</li>
-            <li>Would replay side-effects</li>
-        </ul>
-    </div>
-</div>
-				
-	  		
-	    </section>
-	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Command&lt;/span&gt;\n\n\n\n&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BankAccountCommandHandler&lt;/span&gt;\n\n     &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BankAccountRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accountId&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;bankAccountRepo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/08-event-sourcing-cavetas/03-command-sourcing-example.md&#39;, &#39;title&#39;: &#39;event-sourcing-cavetas/03-command-sourcing-example.md&#39;} -->
-	    <section class="slide"  id="event-sourcing-cavetas/03-command-sourcing-example.md" >
-			
-				
-					<div class="codehilite"><pre><span class="k">case</span> <span class="k">class</span> <span class="nc">ChangeOwner</span><span class="o">(</span><span class="n">accountID</span><span class="k">:</span> <span class="kt">UUID</span><span class="o">,</span> <span class="n">newOwner</span><span class="k">:</span><span class="kt">String</span><span class="o">)</span>
-
-  <span class="k">extends</span> <span class="nc">Command</span>
-
-
-
-<span class="k">class</span> <span class="nc">BankAccountCommandHandler</span>
-
-     <span class="o">(</span><span class="n">bankAccountRepo</span><span class="k">:</span><span class="kt">BankAccountRepository</span><span class="o">)</span> <span class="o">{</span>
-
-  <span class="k">def</span> <span class="n">handle</span><span class="o">(</span><span class="n">changeOwner</span><span class="k">:</span><span class="kt">ChangeOwner</span><span class="o">)</span> <span class="o">{</span>
-
-    <span class="k">val</span> <span class="n">accountId</span> <span class="k">=</span> <span class="n">changeOwner</span><span class="o">.</span><span class="n">accountID</span>
-
-    <span class="k">val</span> <span class="n">newOwner</span> <span class="k">=</span> <span class="n">changeOwner</span><span class="o">.</span><span class="n">newOwner</span>
-
-    <span class="k">val</span> <span class="n">account</span> <span class="k">=</span> <span class="n">bankAccountRepo</span><span class="o">.</span><span class="n">getAccount</span><span class="o">(</span><span class="n">accountId</span><span class="o">)</span>
-
-    <span class="k">val</span> <span class="n">modifiedAccount</span> <span class="k">=</span> <span class="n">account</span><span class="o">.</span><span class="n">changeOwner</span><span class="o">(</span><span class="n">newOwner</span><span class="o">)</span>
-
-    <span class="n">bankAccountRepo</span><span class="o">.</span><span class="n">saveAccount</span><span class="o">(</span><span class="n">modifiedAccount</span><span class="o">)</span>
-
-  <span class="o">}</span>
-
-<span class="o">}</span>
-</pre></div>
-				
-	  		
-	    </section>
-	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Side effects&lt;/h2&gt;\n&lt;h3&gt;Problem&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;Problem:&lt;/strong&gt; We don\&#39;t want side effects to be replayed&lt;/li&gt;\n&lt;li&gt;E-Mails sent twice, orders placed etc.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;div class=&quot;slide&quot;&gt;\n\n&lt;h3&gt;Solutions&lt;/h3&gt;\n&lt;ul&gt;\n&lt;li&gt;Side-effects exclusively triggered by savings of Event&lt;/li&gt;\n&lt;li&gt;Separating side-effects from behaviour&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/08-event-sourcing-cavetas/04-side-effects.md&#39;, &#39;title&#39;: &#39;event-sourcing-cavetas/04-side-effects.md&#39;} -->
-	    <section class="slide"  id="event-sourcing-cavetas/04-side-effects.md" >
-			
-				
-					<h2>Side effects</h2>
-<h3>Problem</h3>
-<ul>
-<li><strong>Problem:</strong> We don't want side effects to be replayed</li>
+<li>We don't want side-effects to be replayed<ul>
 <li>E-Mails sent twice, orders placed etc.</li>
+</ul>
+</li>
 </ul>
 <div class="slide">
 
 <h3>Solutions</h3>
 <ul>
-<li>Side-effects exclusively triggered by savings of Event</li>
-<li>Separating side-effects from behaviour</li>
+<li>Split side-effects &amp; behaviour</li>
+<li>Saving Events triggers Side-effects</li>
 </ul>
 </div>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&quot;&lt;h2&gt;Separating behaviour and state&lt;/h2&gt;\n&lt;p&gt;Operations split into pure functions:&lt;/p&gt;\n&lt;ul&gt;\n&lt;li&gt;Executing commands on an Objects produces events.\n    &lt;code&gt;(Command, Object) =&amp;gt; Events&lt;/code&gt;&lt;/li&gt;\n&lt;li&gt;Applying events causes state to change\n    &lt;code&gt;(Events, Object) =&amp;gt; Object&#39;&lt;/code&gt;&lt;/li&gt;\n&lt;/ul&gt;&quot;, &#39;path&#39;: &#39;slides/08-event-sourcing-cavetas/05-separating-behaviour-and-state.md&#39;, &#39;title&#39;: &#39;event-sourcing-cavetas/05-separating-behaviour-and-state.md&#39;} -->
-	    <section class="slide"  id="event-sourcing-cavetas/05-separating-behaviour-and-state.md" >
+	    <!-- {&#39;markdown_content&#39;: u&quot;&lt;h2&gt;Split side-effects &amp;amp; behaviour&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;\n&lt;p&gt;Executing commands on an object and triggering of side-effects produces events&lt;br /&gt;\n&lt;code&gt;Command -&amp;gt; Object -&amp;gt; Events&lt;/code&gt;&lt;/p&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;Applying events causes state to change&lt;br /&gt;\n&lt;code&gt;Object -&amp;gt; Event -&amp;gt; Object&#39;&lt;/code&gt;&lt;/p&gt;\n&lt;/li&gt;\n&lt;/ul&gt;&quot;, &#39;path&#39;: &#39;slides/08-making-eventsourcing-work/06-separating-behaviour-and-state.md&#39;, &#39;title&#39;: &#39;making-eventsourcing-work/06-separating-behaviour-and-state.md&#39;} -->
+	    <section class="slide"  id="making-eventsourcing-work/06-separating-behaviour-and-state.md" >
 			
 				
-					<h2>Separating behaviour and state</h2>
-<p>Operations split into pure functions:</p>
+					<h2>Split side-effects &amp; behaviour</h2>
 <ul>
-<li>Executing commands on an Objects produces events.
-    <code>(Command, Object) =&gt; Events</code></li>
-<li>Applying events causes state to change
-    <code>(Events, Object) =&gt; Object'</code></li>
+<li>
+<p>Executing commands on an object and triggering of side-effects produces events<br />
+<code>Command -&gt; Object -&gt; Events</code></p>
+</li>
+<li>
+<p>Applying events causes state to change<br />
+<code>Object -&gt; Event -&gt; Object'</code></p>
+</li>
 </ul>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BrokerCommandHandler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bankInterface&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BankInterface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;\n\n                            &lt;span class=&quot;n&quot;&gt;orderBookRepository&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;OrderBookRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;PerformBuyOrder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderBookRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderBookId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;validationResult&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bankInterface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;validationResult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;succeeded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InvalidOrderException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;validationResult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderConfirmation&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bankInterface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderPerformedEvent&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OrderSentToBank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderConfirmation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderPerformedEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;orderBookRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n\n\n&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OrderBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orders&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Seq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Order&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Seq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderSentToBank&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;OrderSentToBank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;OrderBook&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orders&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderSentToBank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/08-event-sourcing-cavetas/06-example-for-separting-state-and-behaviour.md&#39;, &#39;title&#39;: &#39;event-sourcing-cavetas/06-example-for-separting-state-and-behaviour.md&#39;} -->
-	    <section class="slide"  id="event-sourcing-cavetas/06-example-for-separting-state-and-behaviour.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Ex: Separating State &amp;amp; Behaviour&lt;/h2&gt;\n&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BrokerCommandHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bank&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BankInterface&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;\n\n                           &lt;span class=&quot;n&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;OrderBookRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;PerformBuyOrder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderBookId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;validationResult&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;validate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;validationResult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;succeeded&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n      &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InvalidOrderException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;validationResult&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;confirmation&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;perform&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buyCommand&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderDoneEvent&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;OrderSentToBank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;confirmation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderDoneEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orderBook&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/08-making-eventsourcing-work/07-example-for-separting-state-and-behaviour.md&#39;, &#39;title&#39;: &#39;making-eventsourcing-work/07-example-for-separting-state-and-behaviour.md&#39;} -->
+	    <section class="slide"  id="making-eventsourcing-work/07-example-for-separting-state-and-behaviour.md" >
 			
 				
-					<div class="codehilite"><pre><span class="k">class</span> <span class="nc">BrokerCommandHandler</span> <span class="o">(</span><span class="n">bankInterface</span><span class="k">:</span><span class="kt">BankInterface</span><span class="o">,</span>
+					<h2>Ex: Separating State &amp; Behaviour</h2>
+<div class="codehilite"><pre><span class="k">class</span> <span class="nc">BrokerCommandHandler</span><span class="o">(</span><span class="n">bank</span><span class="k">:</span><span class="kt">BankInterface</span><span class="o">,</span>
 
-                            <span class="n">orderBookRepository</span><span class="k">:</span><span class="kt">OrderBookRepository</span><span class="o">)</span> <span class="o">{</span>
-
-
+                           <span class="n">repo</span><span class="k">:</span><span class="kt">OrderBookRepository</span><span class="o">)</span> <span class="o">{</span>
 
   <span class="k">def</span> <span class="n">handle</span><span class="o">(</span><span class="n">buyCommand</span><span class="k">:</span><span class="kt">PerformBuyOrder</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
 
-    <span class="k">var</span> <span class="n">orderBook</span> <span class="k">=</span> <span class="n">orderBookRepository</span><span class="o">.</span><span class="n">load</span><span class="o">(</span><span class="n">buyCommand</span><span class="o">.</span><span class="n">orderBookId</span><span class="o">)</span>
+    <span class="k">var</span> <span class="n">orderBook</span> <span class="k">=</span> <span class="n">repo</span><span class="o">.</span><span class="n">load</span><span class="o">(</span><span class="n">buyCommand</span><span class="o">.</span><span class="n">orderBookId</span><span class="o">)</span>
 
-    <span class="k">val</span> <span class="n">validationResult</span> <span class="k">=</span> <span class="n">bankInterface</span><span class="o">.</span><span class="n">validate</span><span class="o">(</span><span class="n">buyCommand</span><span class="o">.</span><span class="n">order</span><span class="o">)</span>
+    <span class="k">val</span> <span class="n">validationResult</span> <span class="k">=</span> <span class="n">bank</span><span class="o">.</span><span class="n">validate</span><span class="o">(</span><span class="n">buyCommand</span><span class="o">.</span><span class="n">order</span><span class="o">)</span>
 
     <span class="k">if</span> <span class="o">(!</span><span class="n">validationResult</span><span class="o">.</span><span class="n">succeeded</span><span class="o">)</span>
 
@@ -497,25 +419,13 @@
 
 
 
-    <span class="k">val</span> <span class="n">orderConfirmation</span> <span class="k">=</span> <span class="n">bankInterface</span><span class="o">.</span><span class="n">perform</span><span class="o">(</span><span class="n">buyCommand</span><span class="o">.</span><span class="n">order</span><span class="o">)</span>
+    <span class="k">val</span> <span class="n">confirmation</span> <span class="k">=</span> <span class="n">bank</span><span class="o">.</span><span class="n">perform</span><span class="o">(</span><span class="n">buyCommand</span><span class="o">.</span><span class="n">order</span><span class="o">)</span>
 
-    <span class="k">val</span> <span class="n">orderPerformedEvent</span> <span class="k">=</span> <span class="nc">OrderSentToBank</span><span class="o">.</span><span class="n">from</span><span class="o">(</span><span class="n">orderConfirmation</span><span class="o">)</span>
+    <span class="k">val</span> <span class="n">orderDoneEvent</span> <span class="k">=</span> <span class="nc">OrderSentToBank</span><span class="o">.</span><span class="n">from</span><span class="o">(</span><span class="n">confirmation</span><span class="o">)</span>
 
-    <span class="n">orderBook</span> <span class="k">=</span> <span class="n">orderBook</span><span class="o">.</span><span class="n">handle</span><span class="o">(</span><span class="n">orderPerformedEvent</span><span class="o">)</span>
+    <span class="n">orderBook</span> <span class="k">=</span> <span class="n">orderBook</span><span class="o">.</span><span class="n">handle</span><span class="o">(</span><span class="n">orderDoneEvent</span><span class="o">)</span>
 
-    <span class="n">orderBookRepository</span><span class="o">.</span><span class="n">save</span><span class="o">(</span><span class="n">orderBook</span><span class="o">)</span>
-
-  <span class="o">}</span>
-
-<span class="o">}</span>
-
-
-
-<span class="k">case</span> <span class="k">class</span> <span class="nc">OrderBook</span><span class="o">(</span><span class="n">orders</span><span class="k">:</span><span class="kt">Seq</span><span class="o">[</span><span class="kt">Order</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">.</span><span class="n">empty</span><span class="o">)</span> <span class="o">{</span>
-
-  <span class="k">def</span> <span class="n">handle</span><span class="o">(</span><span class="n">orderSentToBank</span><span class="k">:</span><span class="kt">OrderSentToBank</span><span class="o">)</span> <span class="k">:</span> <span class="kt">OrderBook</span> <span class="o">=</span> <span class="o">{</span>
-
-    <span class="k">this</span><span class="o">.</span><span class="n">copy</span><span class="o">(</span><span class="n">orders</span> <span class="o">:+</span> <span class="n">orderSentToBank</span><span class="o">.</span><span class="n">order</span><span class="o">)</span>
+    <span class="n">repo</span><span class="o">.</span><span class="n">save</span><span class="o">(</span><span class="n">orderBook</span><span class="o">)</span>
 
   <span class="o">}</span>
 
@@ -525,15 +435,108 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Reporting and Queries&lt;/h2&gt;\n&lt;h3&gt;Problem&lt;/h3&gt;\n&lt;p&gt;The persisted event stream does not allow for database queries and reports&lt;/p&gt;\n&lt;h3&gt;Solution&lt;/h3&gt;\n&lt;p class=&quot;slide&quot;&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/cqrs.png&quot; /&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/08-event-sourcing-cavetas/07-cqrs.md&#39;, &#39;title&#39;: &#39;event-sourcing-cavetas/07-cqrs.md&#39;} -->
-	    <section class="slide"  id="event-sourcing-cavetas/07-cqrs.md" >
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Saving Events triggers Side-effects&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Creating &amp;amp; Applying Events is separate from Saving Events&lt;/li&gt;\n&lt;li&gt;After Events are saved, Side-effects are triggered via Event-Listeners&lt;/li&gt;\n&lt;li&gt;Events should be saved only once&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/08-making-eventsourcing-work/08-events-saving-trigger-side-effects.md&#39;, &#39;title&#39;: &#39;making-eventsourcing-work/08-events-saving-trigger-side-effects.md&#39;} -->
+	    <section class="slide"  id="making-eventsourcing-work/08-events-saving-trigger-side-effects.md" >
 			
 				
-					<h2>Reporting and Queries</h2>
-<h3>Problem</h3>
+					<h2>Saving Events triggers Side-effects</h2>
+<ul>
+<li>Creating &amp; Applying Events is separate from Saving Events</li>
+<li>After Events are saved, Side-effects are triggered via Event-Listeners</li>
+<li>Events should be saved only once</li>
+</ul>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Problem: Events vs Command&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Confusing Event Sourcing and Command Sourcing&lt;/li&gt;\n&lt;/ul&gt;\n&lt;div class=&quot;container_12&quot;&gt;\n    &lt;div class=&quot;grid_6&quot;&gt;\n        &lt;h4&gt;Event Sourcing&lt;/h4&gt;\n        &lt;ul&gt;\n            &lt;li&gt;Persist only changes in state&lt;/li&gt;\n            &lt;li&gt;Replay may be side-effect free&lt;/li&gt;\n        &lt;/ul&gt;\n        &lt;img src=&quot;static/img/deposit-performed-event-v1.png&quot;/&gt;\n    &lt;/div&gt;\n    &lt;div class=&quot;grid_6&quot;&gt;\n        &lt;h4&gt;Command Sourcing&lt;/h4&gt;\n        &lt;ul&gt;\n            &lt;li&gt;Persist Commands&lt;/li&gt;\n            &lt;li&gt;Replays may trigger side-effects&lt;/li&gt;\n        &lt;/ul&gt;\n        &lt;img src=&quot;static/img/perform-deposit-command.png&quot;/&gt;\n    &lt;/div&gt;\n&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/08-making-eventsourcing-work/10-confusing-event-sourcing-with-command-sourcing.md&#39;, &#39;title&#39;: &#39;making-eventsourcing-work/10-confusing-event-sourcing-with-command-sourcing.md&#39;} -->
+	    <section class="slide"  id="making-eventsourcing-work/10-confusing-event-sourcing-with-command-sourcing.md" >
+			
+				
+					<h2>Problem: Events vs Command</h2>
+<ul>
+<li>Confusing Event Sourcing and Command Sourcing</li>
+</ul>
+<div class="container_12">
+    <div class="grid_6">
+        <h4>Event Sourcing</h4>
+        <ul>
+            <li>Persist only changes in state</li>
+            <li>Replay may be side-effect free</li>
+        </ul>
+        <img src="static/img/deposit-performed-event-v1.png"/>
+    </div>
+    <div class="grid_6">
+        <h4>Command Sourcing</h4>
+        <ul>
+            <li>Persist Commands</li>
+            <li>Replays may trigger side-effects</li>
+        </ul>
+        <img src="static/img/perform-deposit-command.png"/>
+    </div>
+</div>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Ex: Command Sourcing&lt;/h2&gt;\n&lt;div class=&quot;codehilite&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UUID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Command&lt;/span&gt;\n\n\n\n&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BankAccountCommandHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;BankAccountRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;ChangeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accountId&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountID&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changeOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;newOwner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n    &lt;span class=&quot;n&quot;&gt;repo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saveAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedAccount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;\n\n  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n\n&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;\n&lt;/pre&gt;&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/08-making-eventsourcing-work/11-command-sourcing-example.md&#39;, &#39;title&#39;: &#39;making-eventsourcing-work/11-command-sourcing-example.md&#39;} -->
+	    <section class="slide"  id="making-eventsourcing-work/11-command-sourcing-example.md" >
+			
+				
+					<h2>Ex: Command Sourcing</h2>
+<div class="codehilite"><pre><span class="k">case</span> <span class="k">class</span> <span class="nc">ChangeOwner</span><span class="o">(</span><span class="n">accountID</span><span class="k">:</span> <span class="kt">UUID</span><span class="o">,</span> <span class="n">newOwner</span><span class="k">:</span><span class="kt">String</span><span class="o">)</span>
+
+  <span class="k">extends</span> <span class="nc">Command</span>
+
+
+
+<span class="k">class</span> <span class="nc">BankAccountCommandHandler</span><span class="o">(</span><span class="n">repo</span><span class="k">:</span><span class="kt">BankAccountRepository</span><span class="o">)</span> <span class="o">{</span>
+
+  <span class="k">def</span> <span class="n">handle</span><span class="o">(</span><span class="n">changeOwner</span><span class="k">:</span><span class="kt">ChangeOwner</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="k">val</span> <span class="n">accountId</span> <span class="k">=</span> <span class="n">changeOwner</span><span class="o">.</span><span class="n">accountID</span>
+
+    <span class="k">val</span> <span class="n">newOwner</span> <span class="k">=</span> <span class="n">changeOwner</span><span class="o">.</span><span class="n">newOwner</span>
+
+    <span class="k">val</span> <span class="n">account</span> <span class="k">=</span> <span class="n">repo</span><span class="o">.</span><span class="n">getAccount</span><span class="o">(</span><span class="n">accountId</span><span class="o">)</span>
+
+    <span class="k">val</span> <span class="n">modifiedAccount</span> <span class="k">=</span> <span class="n">account</span><span class="o">.</span><span class="n">changeOwner</span><span class="o">(</span><span class="n">newOwner</span><span class="o">)</span>
+
+    <span class="n">repo</span><span class="o">.</span><span class="n">saveAccount</span><span class="o">(</span><span class="n">modifiedAccount</span><span class="o">)</span>
+
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Problem: Reporting &amp;amp; Queries&lt;/h2&gt;\n&lt;p&gt;The persisted event stream does not allow for database queries and reports&lt;/p&gt;\n&lt;div class=&quot;slide&quot;&gt;\n\n&lt;h3&gt;Solution&lt;/h3&gt;\n&lt;p&gt;&lt;img alt=&quot;Eventstream&quot; src=&quot;static/img/cqrs.png&quot; /&gt;&lt;/p&gt;\n&lt;/div&gt;&#39;, &#39;path&#39;: &#39;slides/08-making-eventsourcing-work/15-cqrs.md&#39;, &#39;title&#39;: &#39;making-eventsourcing-work/15-cqrs.md&#39;} -->
+	    <section class="slide"  id="making-eventsourcing-work/15-cqrs.md" >
+			
+				
+					<h2>Problem: Reporting &amp; Queries</h2>
 <p>The persisted event stream does not allow for database queries and reports</p>
+<div class="slide">
+
 <h3>Solution</h3>
-<p class="slide"><img alt="Eventstream" src="static/img/cqrs.png" /></p>
+<p><img alt="Eventstream" src="static/img/cqrs.png" /></p>
+</div>
+				
+	  		
+	    </section>
+	
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Making Event Sourcing work&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Side-effects &amp;amp; Replaying Events&lt;/li&gt;\n&lt;li&gt;Confusing Event Sourcing and Command Sourcing&lt;/li&gt;\n&lt;li&gt;Reporting &amp;amp; Queries&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/08-making-eventsourcing-work/21-making-eventsourcing-work.md&#39;, &#39;title&#39;: &#39;making-eventsourcing-work/21-making-eventsourcing-work.md&#39;} -->
+	    <section class="slide"  id="making-eventsourcing-work/21-making-eventsourcing-work.md" >
+			
+				
+					<h2>Making Event Sourcing work</h2>
+<ul>
+<li>Side-effects &amp; Replaying Events</li>
+<li>Confusing Event Sourcing and Command Sourcing</li>
+<li>Reporting &amp; Queries</li>
+</ul>
 				
 	  		
 	    </section>
