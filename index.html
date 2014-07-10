@@ -532,7 +532,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Summary: Making it work&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Side-effects &amp;amp; Replaying Events&lt;/li&gt;\n&lt;li&gt;Confusing Event Sourcing &amp;amp; Command Sourcing&lt;/li&gt;\n&lt;li&gt;Reporting &amp;amp; Queries&lt;/li&gt;\n&lt;li&gt;Versioning Events&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/08-making-eventsourcing-work/21-making-eventsourcing-work.md&#39;, &#39;title&#39;: &#39;making-eventsourcing-work/21-making-eventsourcing-work.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Summary: Making it work&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Side-effects &amp;amp; Replaying Events&lt;/li&gt;\n&lt;li&gt;Confusing Event Sourcing &amp;amp; Command Sourcing&lt;/li&gt;\n&lt;li&gt;Reporting &amp;amp; Queries&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;Versioning Events&lt;/p&gt;\n&lt;/li&gt;\n&lt;li&gt;\n&lt;p&gt;Concurrency&lt;/p&gt;\n&lt;/li&gt;\n&lt;/ul&gt;&#39;, &#39;path&#39;: &#39;slides/08-making-eventsourcing-work/21-making-eventsourcing-work.md&#39;, &#39;title&#39;: &#39;making-eventsourcing-work/21-making-eventsourcing-work.md&#39;} -->
 	    <section class="slide"  id="making-eventsourcing-work/21-making-eventsourcing-work.md" >
 			
 				
@@ -541,7 +541,12 @@
 <li>Side-effects &amp; Replaying Events</li>
 <li>Confusing Event Sourcing &amp; Command Sourcing</li>
 <li>Reporting &amp; Queries</li>
-<li>Versioning Events</li>
+<li>
+<p>Versioning Events</p>
+</li>
+<li>
+<p>Concurrency</p>
+</li>
 </ul>
 				
 	  		
@@ -633,7 +638,7 @@
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Event Store&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Open Source database for Event Sourcing&lt;/li&gt;\n&lt;li&gt;Project driven by Greg Young&lt;/li&gt;\n&lt;li&gt;Works on .Net/Mono&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;https://github.com/EventStore/eventstorejvmclient&quot;&gt;Early version of Java/Scala Bindings&lt;/a&gt; available&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;http://geteventstore.com/&quot;&gt;More Information available here&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img src=&quot;static/img/ouro.png&quot; style=&quot;float:right;width:30%&quot;/&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/10-interesting-projects/01-event-store.md&#39;, &#39;title&#39;: &#39;interesting-projects/01-event-store.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Event Store&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Open Source database for Event Sourcing&lt;/li&gt;\n&lt;li&gt;Project driven by Greg Young&lt;/li&gt;\n&lt;li&gt;Works on .Net/Mono&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;https://github.com/EventStore/eventstorejvmclient&quot;&gt;Early version of Java/Scala Bindings&lt;/a&gt; available&lt;/li&gt;\n&lt;li&gt;More Information on &lt;a href=&quot;http://geteventstore.com/&quot;&gt;geteventstore.com&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img src=&quot;static/img/ouro.png&quot; style=&quot;float:right;width:30%&quot;/&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/10-interesting-projects/01-event-store.md&#39;, &#39;title&#39;: &#39;interesting-projects/01-event-store.md&#39;} -->
 	    <section class="slide"  id="interesting-projects/01-event-store.md" >
 			
 				
@@ -643,14 +648,14 @@
 <li>Project driven by Greg Young</li>
 <li>Works on .Net/Mono</li>
 <li><a href="https://github.com/EventStore/eventstorejvmclient">Early version of Java/Scala Bindings</a> available</li>
-<li><a href="http://geteventstore.com/">More Information available here</a></li>
+<li>More Information on <a href="http://geteventstore.com/">geteventstore.com</a></li>
 </ul>
 <p><img src="static/img/ouro.png" style="float:right;width:30%"/></p>
 				
 	  		
 	    </section>
 	
-	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Akka Persistence&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Experimental extension for Akka&lt;/li&gt;\n&lt;li&gt;Based on the Actor model&lt;/li&gt;\n&lt;li&gt;Supports both Command- and Event Sourcing&lt;/li&gt;\n&lt;li&gt;Works with Java and Scala&lt;/li&gt;\n&lt;li&gt;&lt;a href=&quot;http://doc.akka.io/docs/akka/snapshot/java/persistence.html&quot;&gt;More Information available here&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img src=&quot;static/img/akka.png&quot; style=&quot;float:right;width:40%&quot;/&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/10-interesting-projects/02-akka-persistence.md&#39;, &#39;title&#39;: &#39;interesting-projects/02-akka-persistence.md&#39;} -->
+	    <!-- {&#39;markdown_content&#39;: u&#39;&lt;h2&gt;Akka Persistence&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;Experimental extension for Akka&lt;/li&gt;\n&lt;li&gt;Based on the Actor model&lt;/li&gt;\n&lt;li&gt;Supports both Command- and Event Sourcing&lt;/li&gt;\n&lt;li&gt;Runs on JVM&lt;/li&gt;\n&lt;li&gt;More Information available on &lt;a href=&quot;http://doc.akka.io/docs/akka/snapshot/java/persistence.html&quot;&gt;akka.io&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;\n&lt;p&gt;&lt;img src=&quot;static/img/akka.png&quot; style=&quot;float:right;width:40%&quot;/&gt;&lt;/p&gt;&#39;, &#39;path&#39;: &#39;slides/10-interesting-projects/02-akka-persistence.md&#39;, &#39;title&#39;: &#39;interesting-projects/02-akka-persistence.md&#39;} -->
 	    <section class="slide"  id="interesting-projects/02-akka-persistence.md" >
 			
 				
@@ -659,8 +664,8 @@
 <li>Experimental extension for Akka</li>
 <li>Based on the Actor model</li>
 <li>Supports both Command- and Event Sourcing</li>
-<li>Works with Java and Scala</li>
-<li><a href="http://doc.akka.io/docs/akka/snapshot/java/persistence.html">More Information available here</a></li>
+<li>Runs on JVM</li>
+<li>More Information available on <a href="http://doc.akka.io/docs/akka/snapshot/java/persistence.html">akka.io</a></li>
 </ul>
 <p><img src="static/img/akka.png" style="float:right;width:40%"/></p>
 				
