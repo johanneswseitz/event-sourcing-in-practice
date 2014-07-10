@@ -1,8 +1,7 @@
-## Split side-effects & behaviour
+## Split side-effects & state
 
-* Executing commands on an object and triggering of side-effects produces events  
+* Executing commands on an object and triggering of side-effects produces Events
     `Command -> Object -> Events`
 
-* Applying events causes state to change  
-    `Object -> Event -> Object'`
-    
+* Applying Events causes state to change
+    `Object -> Event -> Changed Object`
