@@ -4,3 +4,5 @@
 * Confusing Event Sourcing & Command Sourcing
 * Reporting & Queries
 * Versioning Events
+
+* Concurrency
