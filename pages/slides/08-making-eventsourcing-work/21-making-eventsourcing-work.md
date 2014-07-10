@@ -1,5 +1,5 @@
-## Making Event Sourcing work
+## Summary: Making it work
 
 * Side-effects & Replaying Events
-* Confusing Event Sourcing and Command Sourcing
+* Confusing Event Sourcing & Command Sourcing
 * Reporting & Queries
