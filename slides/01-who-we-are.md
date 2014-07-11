@@ -1,4 +1,16 @@
 ## Who we are
 
-![Picture of the Vaamo office](static/img/vaamo-office.jpg)
-<p style="font-size:0.4em">Image &copy; 2013 Vaamo Finanz AG. All rights reserved.</p>
+### Benjamin Reitzammer
+
+
+<div>
+	<img src="static/img/Reitzammer-Benjamin_dwxspeakerdetail.jpg" style="float:left;padding-right:10px;"/>CTO at Vaamo Finanz AG 
+</div>
+<div style="clear:both"></div>
+
+### Johannes Seitz
+
+<div>
+	<img src="static/img/Seitz-Johannes_dwxspeakerdetail.jpg" style="float:left;padding-right:10px;"/>Freelance Software Engineer 
+</div>
+<div style="clear:both"></div>

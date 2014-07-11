@@ -1,6 +1,6 @@
-## Structure
+## This talk is for you
 
-- How Event Sourcing is different 
-- Advantages of Event Sourcing
-- Making Event Sourcing work
-- Some things to consider
+- Understand the basic idea of ES 
+- Know about the advantages of ES
+- **Learn about the issues that come with ES**
+- Understand when ES is a suitable pattern
