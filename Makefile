@@ -6,7 +6,7 @@ start: build
 
 build: 
 	cactus build
-	
+
 test-code:
 	(cd code-samples && sbt test)
 

@@ -7,7 +7,7 @@
 		<h4>Event Sourcing</h4>
 		<ul>
 			<li>Persist only changes in state</li>
-			<li>Replay may be side-effect free</li>
+			<li>Replay can be side-effect free</li>
 		</ul>
 		<img src="static/img/deposit-performed-event-v1.png"/>
 	</div>
@@ -15,7 +15,7 @@
 		<h4>Command Sourcing</h4>
 		<ul>
 			<li>Persist Commands</li>
-			<li>Replays may trigger side-effects</li>
+			<li>Replay may trigger side-effects</li>
 		</ul>
 		<img src="static/img/perform-deposit-command.png"/>
 	</div>

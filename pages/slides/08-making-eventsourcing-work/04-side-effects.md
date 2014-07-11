@@ -6,6 +6,6 @@
 <div class="slide" markdown="1">
 ### Solutions
 
-* Split side-effects & behaviour
-* Saving Events triggers Side-effects
+* Solution 1: Separate side-effect and state change
+* Solution 2: Saving event triggers side-effect
 </div>

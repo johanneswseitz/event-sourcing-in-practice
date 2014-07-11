@@ -1,7 +1,7 @@
 ## Event Sourcing is different
 
 - Don't save the **current state** of objects
-- Save the **Events** that lead to the current state
+- Save the **events** that lead to the current state
 
 <div class="slide" markdown="1">
 - **Event**: Something that happend *in the past*.
