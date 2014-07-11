@@ -1,6 +1,6 @@
 ## Problem: Evolving events
 
-* How to evolve (immutable) events?
+How to evolve (immutable) events?
 
 ### Reasons for change {.slide}
 
