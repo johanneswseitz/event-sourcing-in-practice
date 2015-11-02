@@ -1,5 +1,11 @@
+OS := $(shell uname)
+
 present: build
+ifeq ($(OS), Darwin)
 	open -a "Google Chrome" .build/index.html
+else 
+	firefox ./.build/index.html
+endif
 
 start: build
 	cactus serve
