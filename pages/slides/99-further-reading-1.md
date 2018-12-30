@@ -9,6 +9,7 @@
 
 ### Event sourcing implementation
 
+- [Event Sourcing for Enterprise](https://www.youtube.com/watch?v=kyu8RY5NO3w) covers both principles and how to implement these in each component
 - [DDDD by Greg Young](http://abdullin.com/storage/uploads/2010/04/2010-04-16_DDDD_Drafts_by_Greg_Young.pdf)
 - [Event versioning and evolutions](http://bliki.abdullin.com/event-sourcing/versioning)
 
