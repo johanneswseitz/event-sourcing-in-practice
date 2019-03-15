@@ -9,7 +9,7 @@
 
 ### Event sourcing implementation
 
-- [DDDD by Greg Young](http://abdullin.com/storage/uploads/2010/04/2010-04-16_DDDD_Drafts_by_Greg_Young.pdf)
-- [Event versioning and evolutions](http://bliki.abdullin.com/event-sourcing/versioning)
+- [DDDD by Greg Young](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
+- [Event versioning and evolutions](https://abdullin.com/post/event-sourcing-versioning/)
 
 
